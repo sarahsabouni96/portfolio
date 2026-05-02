@@ -1,0 +1,1086 @@
+<!doctype html>
+<html class="dark scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      name="description"
+      content="Sarah Sabouni - Data Scientist specializing in Machine Learning."
+    />
+    <meta
+      name="keywords"
+      content="Data Science, Machine Learning, Sarah Sabouni"
+    />
+    <title>Projects | Sarah Sabouni</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22none%22/><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Manrope, sans-serif%22 font-weight=%22800%22 font-size=%2270%22 fill=%22%23A78BFA%22>S</text></svg>"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#0f1930",
+              "surface-bright": "#1f2b49",
+              "on-primary": "#39008c",
+              "secondary-fixed-dim": "#c7d5ee",
+              "on-surface-variant": "#a3aac4",
+              "on-tertiary-container": "#ffffff",
+              "on-primary-fixed-variant": "#370086",
+              primary: "#ba9eff",
+              "surface-variant": "#192540",
+              "surface-container-lowest": "#000000",
+              "on-secondary": "#455367",
+              "secondary-dim": "#c7d5ee",
+              outline: "#6d758c",
+              "tertiary-dim": "#8a4cfc",
+              "inverse-primary": "#6e3bd7",
+              "inverse-on-surface": "#4d556b",
+              "on-surface": "#dee5ff",
+              "outline-variant": "#40485d",
+              tertiary: "#af88ff",
+              "on-error-container": "#ffb2b9",
+              error: "#ff6e84",
+              "secondary-container": "#3a485c",
+              "on-secondary-fixed-variant": "#4e5c71",
+              "surface-dim": "#060e20",
+              "surface-tint": "#ba9eff",
+              "primary-container": "#ae8dff",
+              "tertiary-container": "#8342f4",
+              "surface-container-low": "#091328",
+              "on-tertiary": "#2b0065",
+              surface: "#060e20",
+              background: "#060e20",
+              "primary-fixed-dim": "#a27cff",
+              "on-secondary-container": "#c3d1ea",
+              "on-tertiary-fixed": "#200051",
+              "on-secondary-fixed": "#324054",
+              "surface-container-high": "#141f38",
+              "surface-container-highest": "#192540",
+              secondary: "#d5e3fd",
+              "on-tertiary-fixed-variant": "#4a00a4",
+              "on-primary-container": "#2b006e",
+              "primary-fixed": "#ae8dff",
+              "inverse-surface": "#faf8ff",
+              "on-primary-fixed": "#000000",
+              "tertiary-fixed-dim": "#b48fff",
+              "on-error": "#490013",
+              "error-container": "#a70138",
+              "secondary-fixed": "#d5e3fd",
+              "error-dim": "#d73357",
+              "tertiary-fixed": "#c0a0ff",
+              "on-background": "#dee5ff",
+              "primary-dim": "#8455ef",
+            },
+            borderRadius: {
+              DEFAULT: "12px",
+              lg: "12px",
+              xl: "12px",
+              full: "9999px",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      .font-body {
+        color: #a3aac4 !important;
+        line-height: 1.7;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #ffffff !important;
+        font-family: "Manrope", sans-serif;
+      }
+      .text-white,
+      .btn-secondary,
+      span.text-white,
+      span.font-bold.text-white {
+        color: inherit;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .content-container {
+        max-width: 1440px;
+        margin-inline: auto;
+        padding-inline: 5%;
+        width: 100%;
+      }
+
+      .btn-secondary {
+        font-family: "Manrope", sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 14px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+        border-radius: 12px !important;
+        padding: 12px 32px !important;
+        background-color: transparent !important;
+        color: #ffffff !important;
+        border: 1px solid #a78bfa !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+      }
+      .btn-secondary:hover {
+        background-color: #a78bfa !important;
+        color: #ffffff !important;
+        box-shadow: 0 0 20px rgba(167, 139, 250, 0.4) !important;
+        transform: scale(1.05) !important;
+      }
+      .mobile-filter-container {
+        display: flex;
+        white-space: nowrap;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+      }
+      .filter-btn {
+        flex-shrink: 0;
+        padding: 8px 4px;
+      }
+      .filter-btn {
+        position: relative;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .filter-btn:hover {
+        color: #a78bfa !important;
+      }
+      .filter-btn.active {
+        color: #a78bfa !important;
+        text-shadow: none !important;
+      }
+      .filter-btn.active::after {
+        opacity: 1;
+        transform: translateY(0);
+        box-shadow: 0 0 8px 1px rgba(167, 186, 250, 0.6);
+      }
+
+      .mobile-filter-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: transform, opacity;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .project-card {
+        background: rgba(22, 32, 51, 0.8) !important;
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(167, 139, 250, 0.1) !important;
+        transition:
+          transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+          border-color 0.4s ease,
+          box-shadow 0.4s ease !important;
+        overflow: hidden;
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px) !important;
+        border-color: rgba(167, 139, 250, 0.5) !important;
+        box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7) !important;
+      }
+
+      .project-card img {
+        transition: opacity 0.4s ease !important;
+        transform: none !important;
+      }
+
+      .project-card:hover img {
+        opacity: 0.85;
+        transform: none !important;
+      }
+
+      .project-card.fade-out {
+        opacity: 0;
+        transform: translateY(20px);
+        pointer-events: none;
+      }
+
+      .pagination-link {
+        transition: all 0.3s ease;
+      }
+      .pagination-link:hover:not(:disabled) {
+        color: #ba9eff;
+        border-color: #ba9eff;
+        box-shadow: 0 0 10px rgba(186, 158, 255, 0.3);
+      }
+      .pagination-link.active {
+        background-color: #ba9eff !important;
+        color: #060e20 !important;
+        border-color: #ba9eff !important;
+        box-shadow: 0 0 20px rgba(186, 158, 255, 0.4);
+      }
+      .pagination-link:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+
+      @keyframes page-pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(186, 158, 255, 0.4);
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(186, 158, 255, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(186, 158, 255, 0);
+        }
+      }
+      .page-transitioning {
+        animation: page-pulse 1s infinite;
+      }
+
+      @keyframes pulse-click {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.92);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .pulse-animation {
+        animation: pulse-click 0.2s ease-out;
+      }
+
+      #mobile-menu {
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+      }
+      #mobile-menu.open {
+        transform: translateX(0);
+      }
+      .mobile-link {
+        transition: all 0.3s ease;
+      }
+      .mobile-link:hover {
+        color: #a78bfa !important;
+        padding-left: 8px;
+      }
+      .nav-link-active {
+        color: #a78bfa !important;
+        border-bottom: 2px solid #a78bfa;
+        padding-bottom: 4px;
+      }
+      .nav-link,
+      .mobile-link {
+        transition: all 0.3s ease-in-out;
+      }
+      .mobile-link-active {
+        color: #a78bfa !important;
+        border-left: 3px solid #a78bfa;
+        padding-left: 12px;
+        font-weight: 700;
+        transition: all 0.2s ease-in-out;
+      }
+    </style>
+    <!-- <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sarah Sabouni",
+        "jobTitle": "Data Scientist",
+        "url": "https://sarahsabouni.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/sarah-sabouni-56058220a",
+          "https://github.com/sarahsabouni96"
+        ],
+        "knowsAbout": [
+          "Data Science",
+          "Machine Learning",
+          "Artificial Intelligence",
+          "Data Visualization",
+          "Data Analytics"
+        ]
+      }
+    </script> -->
+  </head>
+  <body
+    class="bg-[#060E20] text-[#a3aac4] font-body selection:bg-primary/30 min-h-screen flex flex-col"
+  >
+    <header
+      class="h-[80px] bg-[#0F172A]/80 backdrop-blur-[10px] sticky top-0 w-full z-50 flex items-center border-b border-white/10"
+    >
+      <div class="content-container">
+        <nav class="flex justify-between items-center w-full">
+          <div
+            class="text-[20px] md:text-[22px] font-[800] tracking-tighter text-white uppercase flex items-center"
+          >
+            <a class="" href="index.html" aria-label="Back to top"
+              >SARAH SABOUNI</a
+            >
+          </div>
+          <div
+            class="hidden md:flex items-center gap-8 text-[16px] font-[500] absolute left-1/2 -translate-x-1/2"
+            id="nav-links"
+          >
+            <a
+              class="nav-link transition-colors duration-300 text-[#94A3B8] hover:text-[#A78BFA]"
+              data-i18n="nav.home"
+              href="index.html#hero"
+              >Home</a
+            >
+            <a
+              class="nav-link transition-colors duration-300 text-[#94A3B8] hover:text-[#A78BFA]"
+              data-i18n="nav.about"
+              href="index.html#about"
+              >About</a
+            >
+            <a
+              class="nav-link transition-colors duration-300 text-[#94A3B8] hover:text-[#A78BFA]"
+              data-i18n="nav.projects"
+              href="index.html#projects"
+              >Projects</a
+            >
+            <a
+              class="nav-link transition-colors duration-300 text-[#94A3B8] hover:text-[#A78BFA]"
+              data-i18n="nav.contact"
+              href="index.html#contact"
+              >Contact</a
+            >
+          </div>
+          <div class="hidden md:flex items-center text-[14px]">
+            <button
+              class="text-[#FFFFFF] font-bold cursor-pointer lang-toggle focus:outline-none"
+              id="lang-en"
+              onclick="switchLanguage('en')"
+              aria-pressed="true"
+            >
+              EN
+            </button>
+            <span class="text-[#94A3B8] mx-[12px]" aria-hidden="true">|</span>
+            <button
+              class="text-[#94A3B8] font-normal cursor-pointer hover:text-white transition-colors lang-toggle focus:outline-none"
+              id="lang-de"
+              onclick="switchLanguage('de')"
+              aria-pressed="false"
+            >
+              DE
+            </button>
+          </div>
+          <button class="md:hidden text-white p-2" id="menu-toggle">
+            <span class="material-symbols-outlined text-[32px]">menu</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <!-- Mobile Menu Overlay -->
+    <div
+      class="fixed inset-0 bg-[#060e20] z-[100] flex flex-col p-8 pb-16 md:hidden transition-transform duration-300 translate-x-full"
+      id="mobile-menu"
+    >
+      <div class="flex justify-between items-center mb-12">
+        <div
+          class="text-[18px] font-[800] tracking-tighter text-white uppercase"
+        >
+          SARAH SABOUNI
+        </div>
+        <button class="text-white p-2" id="menu-close">
+          <span class="material-symbols-outlined text-[28px]">close</span>
+        </button>
+      </div>
+
+      <div class="flex flex-col gap-6 text-xl font-headline font-medium">
+        <a
+          class="mobile-link text-[#94A3B8] hover:text-[#A78BFA] transition-colors duration-300"
+          href="index.html#hero"
+          onclick="closeMenu()"
+          >Home</a
+        >
+        <a
+          class="mobile-link text-[#94A3B8] hover:text-[#A78BFA] transition-colors duration-300"
+          href="index.html#about"
+          onclick="closeMenu()"
+          >About</a
+        >
+        <a
+          class="mobile-link text-[#94A3B8] hover:text-[#A78BFA] transition-colors duration-300"
+          href="index.html#projects"
+          onclick="closeMenu()"
+          >Projects</a
+        >
+        <a
+          class="mobile-link text-[#94A3B8] hover:text-[#A78BFA] transition-colors duration-300"
+          href="index.html#contact"
+          onclick="closeMenu()"
+          >Contact</a
+        >
+      </div>
+
+      <div
+        class="mt-auto flex items-center gap-4 text-[13px] border-t border-white/5 pt-8 mb-8"
+      >
+        <button
+          id="mobile-lang-en"
+          class="tracking-[0.15em] transition-all duration-300"
+          onclick="switchLanguage('en')"
+        >
+          EN
+        </button>
+
+        <span class="text-[#334155] opacity-40" aria-hidden="true">|</span>
+
+        <button
+          id="mobile-lang-de"
+          class="tracking-[0.15em] transition-all duration-300"
+          onclick="switchLanguage('de')"
+        >
+          DE
+        </button>
+      </div>
+    </div>
+    <main class="content-container pt-12 md:pt-24 pb-16 md:pb-24 flex-grow">
+      <div class="mb-12 fade-in-up">
+        <a
+          class="inline-flex items-center text-[#94A3B8] hover:text-[#A78BFA] transition-all duration-300 text-sm font-medium group"
+          href="index.html"
+          aria-label="Return to Sarah Sabouni's portfolio homepage"
+        >
+          <span class="mr-2 transition-transform group-hover:-translate-x-1"
+            >←</span
+          >
+          <span data-i18n="projects_page.back_home">Back to Home</span>
+        </a>
+      </div>
+      <!-- Hero Header -->
+      <header class="mb-12 md:mb-24 reveal active" id="hero-heading">
+        <h1
+          class="text-4xl md:text-7xl font-headline font-extrabold text-white tracking-tighter mb-4 md:mb-8"
+          data-i18n="projects_page.hero_title"
+        >
+          Selected <span class="text-primary">Projects</span>
+        </h1>
+        <p
+          class="text-[#a3aac4] text-base md:text-lg max-w-[850px] leading-relaxed text-left"
+          data-i18n="projects_page.hero_subtitle"
+        >
+          A showcase of data-driven research and machine learning
+          implementations. These projects reflect my journey through Master's
+          studies, focusing on building predictive models and transforming
+          complex data into meaningful insights.
+        </p>
+      </header>
+      <!-- Horizontal Filter Bar -->
+      <div
+        class="sticky top-[80px] z-40 bg-[#060E20] mb-8 pt-6 border-b border-white/5 pb-4 w-full"
+        id="filter-anchor"
+      >
+        <div
+          class="flex overflow-x-auto mobile-filter-container gap-8 md:gap-12 items-center text-[11px] md:text-[13px] font-bold uppercase tracking-[0.15em] px-0 no-scrollbar"
+          id="filter-container"
+        >
+          <button
+            class="filter-btn active whitespace-nowrap"
+            data-filter.all="all"
+            data-i18n="projects_page.filters.all"
+          >
+            All
+          </button>
+          <button
+            class="filter-btn hover:text-[#A78BFA] transition-colors whitespace-nowrap text-[#a3aac4]"
+            data-filter="machine-learning"
+            data-i18n="projects_page.filters.ml"
+          >
+            Machine Learning
+          </button>
+          <button
+            class="filter-btn hover:text-[#A78BFA] transition-colors whitespace-nowrap text-[#a3aac4]"
+            data-filter="ai"
+            data-i18n="projects_page.filters.ai"
+          >
+            Artificial Intelligence
+          </button>
+          <button
+            class="filter-btn hover:text-[#A78BFA] transition-colors whitespace-nowrap text-[#a3aac4]"
+            data-filter="data-viz"
+            data-i18n="projects_page.filters.dv"
+          >
+            Data Visualization
+          </button>
+          <!-- <button
+            class="filter-btn hover:text-[#A78BFA] transition-colors whitespace-nowrap text-[#a3aac4]"
+            data-filter="data-analytics"
+            data-i18n="projects_page.filters.da"
+          >
+            Data Analytics
+          </button> -->
+        </div>
+      </div>
+      <!-- Project Grid -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch"
+        id="project-grid"
+      >
+        <!-- Project 1 -->
+        <article
+          class="project-card reveal active border border-white/5 rounded-xl overflow-hidden flex flex-col group bg-[#162033] h-full"
+          data-category="machine-learning"
+        >
+          <div class="aspect-video relative overflow-hidden bg-slate-950">
+            <img
+              alt="Visual representation of Air Quality forecasting model for NO2 levels using Machine Learning"
+              loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              src="assets/images/Air quality prediction with machine learning.png"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"
+            ></div>
+          </div>
+          <div class="p-6 md:p-8 flex flex-col flex-grow">
+            <span
+              class="text-[0.65rem] font-bold uppercase tracking-widest text-primary mb-3 md:mb-4 block"
+              data-i18n="projects_page.filters.ml"
+              >Machine Learning</span
+            >
+            <h3
+              class="text-lg md:text-xl font-headline font-bold text-white mb-2 md:mb-3"
+              data-i18n="projects_page.items.no2.title"
+            >
+              Online NO₂ Forecasting
+            </h3>
+            <p
+              class="text-[#a3aac4] text-sm leading-relaxed mb-6 md:mb-8 flex-grow line-clamp-3 min-h-[4.5rem]"
+              data-i18n="projects_page.items.no2.desc"
+            >
+              A real-time adaptive ML system using Entropic Online Mirror
+              Descent (OMD) to predict urban air quality fluctuations in
+              Chemnitz with zero retraining required
+            </p>
+            <a
+              href="Projects/project1-casestudy.html"
+              target="_blank"
+              class="w-full"
+              rel="noopener noreferrer"
+              aria-label="View Case Study for Online NO2 Forecasting project (opens in a new tab)"
+            >
+              <button
+                class="w-full btn-secondary py-2.5 md:py-3"
+                data-i18n="projects_page.cta_view"
+              >
+                View Case Study
+              </button></a
+            >
+          </div>
+        </article>
+        <!-- Project 2 -->
+        <article
+          class="project-card reveal active border border-white/5 rounded-xl overflow-hidden flex flex-col group bg-[#162033] h-full"
+          data-category="machine-learning"
+        >
+          <div class="aspect-video relative overflow-hidden bg-slate-950">
+            <img
+              alt="Data visualization of healthcare cost regression analysis using PyTorch and Scikit-Learn to predict medical insurance charges"
+              loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              src="assets/images/medical.png"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"
+            ></div>
+          </div>
+          <div class="p-6 md:p-8 flex flex-col flex-grow">
+            <span
+              class="text-[0.65rem] font-bold uppercase tracking-widest text-primary mb-3 md:mb-4 block"
+              data-i18n="projects_page.filters.ml"
+              >Machine Learning</span
+            >
+            <h3
+              class="text-lg md:text-xl font-headline font-bold text-white mb-2 md:mb-3"
+              data-i18n="projects_page.items.insurance.title"
+            >
+              Healthcare Cost Regression
+            </h3>
+            <p
+              class="text-[#a3aac4] text-sm leading-relaxed mb-6 md:mb-8 flex-grow line-clamp-3 min-h-[4.5rem]"
+              data-i18n="projects_page.items.insurance.desc"
+            >
+              A comparative study between custom PyTorch implementations and
+              Scikit-Learn to predict insurance charges with 75% variance
+              explanation.
+            </p>
+            <a
+              href="Projects/project2-casestudy.html"
+              rel="noopener noreferrer"
+              target="_blank"
+              class="w-full"
+              aria-label="View Case Study for Healthcare Cost Regression project (opens in a new tab)"
+            >
+              <button
+                class="w-full btn-secondary py-2.5 md:py-3"
+                data-i18n="projects_page.cta_view"
+              >
+                View Case Study
+              </button></a
+            >
+          </div>
+        </article>
+        <!-- Project 3 -->
+        <article
+          class="project-card reveal active border border-white/5 rounded-xl overflow-hidden flex flex-col group bg-[#162033] h-full"
+          data-category="machine-learning"
+        >
+          <div class="aspect-video relative overflow-hidden bg-slate-950">
+            <img
+              alt="Machine learning pipeline interface for used car market value estimation featuring feature engineering and data transformations"
+              loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              src="assets/images/car.png"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"
+            ></div>
+          </div>
+          <div class="p-6 md:p-8 flex flex-col flex-grow">
+            <span
+              class="text-[0.65rem] font-bold uppercase tracking-widest text-primary mb-3 md:mb-4 block"
+              data-i18n="projects_page.filters.ml"
+              >Machine Learning</span
+            >
+            <h3
+              class="text-lg md:text-xl font-headline font-bold text-white mb-2 md:mb-3"
+              data-i18n="projects_page.items.cars.title"
+            >
+              Vehicle Market Estimation
+            </h3>
+            <p
+              class="text-[#a3aac4] text-sm leading-relaxed mb-6 md:mb-8 flex-grow line-clamp-3 min-h-[4.5rem]"
+              data-i18n="projects_page.items.cars.desc"
+            >
+              End-to-end regression pipeline featuring advanced feature
+              engineering and log-transformations to estimate used car market
+              values.
+            </p>
+            <a
+              href="Projects/project3-casestudy.html"
+              rel="noopener noreferrer"
+              target="_blank"
+              class="w-full"
+              aria-label="View Case Study for Vehicle Market Estimation project (opens in a new tab)"
+            >
+              <button
+                class="w-full btn-secondary py-2.5 md:py-3"
+                data-i18n="projects_page.cta_view"
+              >
+                View Case Study
+              </button></a
+            >
+          </div>
+        </article>
+        <!-- Project 4 -->
+        <article
+          class="project-card reveal active border border-white/5 rounded-xl overflow-hidden flex flex-col group bg-[#162033] h-full"
+          data-category="ai"
+        >
+          <div class="aspect-video relative overflow-hidden bg-slate-950">
+            <img
+              alt="Deep learning neural network visualization for audio track mood classification and emotional vector mapping"
+              loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              src="assets/images/AI music mood classification visualization.png"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"
+            ></div>
+          </div>
+          <div class="p-6 md:p-8 flex flex-col flex-grow">
+            <span
+              class="text-[0.65rem] font-bold uppercase tracking-widest text-primary mb-3 md:mb-4 block"
+              data-i18n="projects_page.filters.ai"
+              >Artificial Intelligence</span
+            >
+            <h3
+              class="text-lg md:text-xl font-headline font-bold text-white mb-2 md:mb-3"
+              data-i18n="projects_page.items.mood.title"
+            >
+              Deep Mood Classifier
+            </h3>
+            <p
+              class="text-[#a3aac4] text-sm leading-relaxed mb-6 md:mb-8 flex-grow line-clamp-3 min-h-[4.5rem]"
+              data-i18n="projects_page.items.mood.desc"
+            >
+              A multi-class Neural Network trained in PyTorch to categorize
+              audio tracks into emotional vectors with 80% accuracy using
+              complex audio features.
+            </p>
+            <a
+              href="Projects/project4-casestudy.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full"
+              aria-label="View Case Study for Deep Mood Classifier project (opens in a new tab)"
+            >
+              <button
+                class="w-full btn-secondary py-2.5 md:py-3"
+                data-i18n="projects_page.cta_view"
+              >
+                View Case Study
+              </button></a
+            >
+          </div>
+        </article>
+        <!-- Project 5 -->
+        <article
+          class="project-card reveal active border border-white/5 rounded-xl overflow-hidden flex flex-col group bg-[#162033] h-full"
+          data-category="data-viz"
+        >
+          <div class="aspect-video relative overflow-hidden bg-slate-950">
+            <img
+              alt="Interactive Sales Intelligence Dashboard created with Power BI and DAX"
+              loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              src="assets/images/Superstore Sales Dashboard.png"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"
+            ></div>
+          </div>
+          <div class="p-6 md:p-8 flex flex-col flex-grow">
+            <span
+              class="text-[0.65rem] font-bold uppercase tracking-widest text-primary mb-3 md:mb-4 block"
+              data-i18n="projects_page.filters.dv"
+              >Data Visualization</span
+            >
+            <h3
+              class="text-lg md:text-xl font-headline font-bold text-white mb-2 md:mb-3"
+              data-i18n="projects_page.items.sales.title"
+            >
+              Executive Sales Intelligence
+            </h3>
+            <p
+              class="text-[#a3aac4] text-sm leading-relaxed mb-6 md:mb-8 flex-grow line-clamp-3 min-h-[4.5rem]"
+              data-i18n="projects_page.items.sales.desc"
+            >
+              Interactive Power BI dashboard using DAX and Power Query to
+              transform raw retail data into actionable business KPIs and
+              regional insights.
+            </p>
+            <a
+              href="Projects/project5-casestudy.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full"
+              aria-label="View Case Study for Executive Sales Intelligence project (opens in a new tab)"
+            >
+              <button
+                class="w-full btn-secondary py-2.5 md:py-3"
+                data-i18n="projects_page.cta_view"
+              >
+                View Case Study
+              </button></a
+            >
+          </div>
+        </article>
+      </div>
+      <!-- Pagination -->
+      <div
+        class="mt-12 md:mt-20 flex justify-center items-center gap-3 md:gap-4 reveal active"
+        id="pagination-container"
+      >
+        <!-- Will be populated by JS -->
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-10 border-t border-[#A78BFA]/15 bg-[#060e20]">
+      <div class="content-container">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 items-center gap-8 md:gap-0"
+        >
+          <div class="flex justify-center md:justify-start">
+            <a
+              class="text-[14px] font-extrabold tracking-tighter text-[#94A3B8] uppercase hover:text-[#A78BFA] transition-colors duration-300"
+              href="index.html"
+              aria-label="Return to Sarah Sabouni's portfolio homepage"
+            >
+              © <span id="year"></span> SARAH SABOUNI
+            </a>
+          </div>
+
+          <div class="flex justify-center order-3 md:order-2">
+            <div
+              class="text-[12px] flex items-center gap-2 tracking-wider text-[#94A3B8] uppercase"
+            >
+              <span class="opacity-70" data-i18n="footer.developed_by"
+                >DEVELOPED BY</span
+              >
+              <a
+                class="text-[#94A3B8] font-bold hover:text-[#A78BFA] transition-colors duration-300"
+                href="https://www.linkedin.com/in/razan-azizieh-b683511ba"
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="Visit Razan Azizieh's LinkedIn Profile (opens in a new tab)"
+              >
+                RAZAN AZIZIEH
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="flex justify-center md:justify-end order-2 md:order-3 items-center"
+          >
+            <a
+              class="text-[#94A3B8] text-[16px] font-[500] capitalize transition-colors duration-300 hover:text-[#A78BFA]"
+              data-i18n="footer.legal"
+              href="legal.html"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="View Legal Notice"
+            >
+              Legal Notice
+            </a>
+
+            <span class="text-[#94A3B8] opacity-20 mx-4" aria-hidden="true"
+              >|</span
+            >
+
+            <a
+              class="text-[#94A3B8] text-[16px] font-[500] capitalize transition-colors duration-300 hover:text-[#A78BFA]"
+              data-i18n="footer.privacy"
+              href="privacy.html"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="View Privacy Policy"
+            >
+              Privacy Policy
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const ITEMS_PER_PAGE = 6;
+        let currentPage = 1;
+        let currentFilter = "all";
+
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const projectCards = Array.from(
+          document.querySelectorAll(".project-card"),
+        );
+        const paginationContainer = document.getElementById(
+          "pagination-container",
+        );
+
+        function renderProjects() {
+          const filtered =
+            currentFilter === "all" || !currentFilter
+              ? projectCards
+              : projectCards.filter(
+                  (card) => card.dataset.category === currentFilter,
+                );
+
+          const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+
+          projectCards.forEach((card) => {
+            card.classList.add("hidden");
+            card.classList.remove("flex", "active");
+          });
+
+          const start = (currentPage - 1) * ITEMS_PER_PAGE;
+          const visible = filtered.slice(start, start + ITEMS_PER_PAGE);
+
+          visible.forEach((card, index) => {
+            card.classList.remove("hidden");
+            card.classList.add("flex");
+            setTimeout(() => card.classList.add("active"), index * 100);
+          });
+
+          updatePagination(totalPages);
+
+          if (typeof switchLanguage === "function") {
+            const savedLang = localStorage.getItem("preferredLang") || "en";
+            switchLanguage(savedLang);
+          }
+        }
+
+        function updatePagination(totalPages) {
+          paginationContainer.innerHTML = "";
+          if (totalPages <= 1) return;
+
+          for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement("button");
+            btn.className = `pagination-link w-10 h-10 rounded-lg border border-white/10 flex items-center justify-center text-sm font-bold transition-all ${i === currentPage ? "bg-primary text-white border-primary" : "text-[#a3aac4] hover:border-primary/50"}`;
+            btn.innerText = i;
+            btn.onclick = () => {
+              currentPage = i;
+              const filterAnchor = document.getElementById("filter-anchor");
+              const offsetPosition = filterAnchor.offsetTop - 100;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+              renderProjects();
+            };
+            paginationContainer.appendChild(btn);
+          }
+        }
+
+        filterButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            currentFilter =
+              btn.getAttribute("data-filter") ||
+              btn.getAttribute("data-filter.all") ||
+              "all";
+            currentPage = 1;
+
+            filterButtons.forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            renderProjects();
+          });
+        });
+
+        renderProjects();
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const revealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          },
+        );
+
+        document
+          .querySelectorAll(".reveal")
+          .forEach((el) => revealObserver.observe(el));
+
+        const menuToggle = document.getElementById("menu-toggle");
+        const menuClose = document.getElementById("menu-close");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.add("open");
+          document.body.style.overflow = "hidden";
+        });
+
+        window.closeMenu = function () {
+          mobileMenu.classList.remove("open");
+          document.body.style.overflow = "auto";
+        };
+
+        menuClose.addEventListener("click", closeMenu);
+
+        document.querySelectorAll("#mobile-menu a").forEach((link) => {
+          link.addEventListener("click", () => {
+            closeMenu();
+          });
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const navLinks = document.querySelectorAll(".nav-link");
+        const mobileLinks = document.querySelectorAll(".mobile-link");
+
+        function highlightCurrentPage() {
+          navLinks.forEach((link) => {
+            const href = link.getAttribute("href");
+            if (href.includes("#projects")) {
+              link.classList.add(
+                "text-[#A78BFA]",
+                "border-b-2",
+                "border-[#A78BFA]",
+                "pb-1",
+              );
+              link.classList.remove("text-[#94A3B8]");
+            } else {
+              link.classList.add("text-[#94A3B8]");
+              link.classList.remove(
+                "text-[#A78BFA]",
+                "border-b-2",
+                "border-[#A78BFA]",
+                "pb-1",
+              );
+            }
+          });
+
+          mobileLinks.forEach((link) => {
+            const href = link.getAttribute("href");
+            if (href.includes("#projects")) {
+              link.classList.add(
+                "text-[#A78BFA]",
+                "border-l-4",
+                "pl-4",
+                "border-[#A78BFA]",
+              );
+              link.classList.remove("text-[#94A3B8]");
+            } else {
+              link.classList.add("text-[#94A3B8]");
+              link.classList.remove(
+                "text-[#A78BFA]",
+                "border-l-4",
+                "pl-4",
+                "border-[#A78BFA]",
+              );
+            }
+          });
+        }
+
+        highlightCurrentPage();
+      });
+    </script>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="js/translations.js"></script>
+  </body>
+</html>

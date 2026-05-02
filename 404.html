@@ -1,0 +1,206 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      name="description"
+      content="Sarah Sabouni - Data Scientist specializing in Machine Learning."
+    />
+    <meta
+      name="keywords"
+      content="Data Science, Machine Learning, Sarah Sabouni"
+    />
+    <meta name="robots" content="noindex, follow" />
+    <title>404: Page Not Found | Sarah Sabouni</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22none%22/><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-family=%22Manrope, sans-serif%22 font-weight=%22800%22 font-size=%2270%22 fill=%22%23A78BFA%22>S</text></svg>"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              background: "#060e20",
+              primary: "#A78BFA",
+              "on-surface": "#dee5ff",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+            },
+            keyframes: {
+              "fade-in-up": {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+            animation: {
+              "fade-in-up": "fade-in-up 0.8s ease-out forwards",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        background-color: #060e20;
+        color: #dee5ff;
+      }
+      .btn-primary {
+        font-family: "Manrope", sans-serif !important;
+        font-weight: 600 !important;
+        font-size: 14px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+        border-radius: 12px !important;
+        padding: 12px 32px !important;
+        background-color: #a78bfa !important;
+        color: #ffffff !important;
+        border: 1px solid #a78bfa !important;
+        transition: all 0.3s ease !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .btn-primary:hover {
+        background-color: #a78bfa !important;
+        box-shadow: 0 0 20px rgba(167, 139, 250, 0.3) !important;
+        transform: scale(1.05) !important;
+      }
+      @keyframes glitch {
+        0% {
+          transform: translate(-50%, -50%) skew(0deg);
+        }
+        20% {
+          transform: translate(-52%, -48%) skew(2deg);
+          opacity: 0.3;
+        }
+        40% {
+          transform: translate(-48%, -52%) skew(-2deg);
+          opacity: 0.5;
+        }
+        100% {
+          transform: translate(-50%, -50%) skew(0deg);
+        }
+      }
+
+      .text-outline {
+        animation: glitch 3s infinite alternate-reverse;
+      }
+      .text-outline {
+        -webkit-text-stroke: 2px rgba(167, 139, 250, 0.1);
+        color: transparent;
+      }
+      .animate-fade-in-up {
+        opacity: 0;
+      }
+      .stagger-1 {
+        animation-delay: 0.2s;
+      }
+      .stagger-2 {
+        animation-delay: 0.4s;
+      }
+      .stagger-3 {
+        animation-delay: 0.6s;
+      }
+    </style>
+  </head>
+
+  <body
+    class="font-body antialiased overflow-hidden bg-background text-[#dee5ff]"
+  >
+    <main
+      class="relative flex flex-col items-center justify-center min-h-screen px-6 text-center"
+    >
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none z-0"
+      >
+        <span
+          class="font-headline font-extrabold text-[50vw] md:text-[35vw] text-outline opacity-20 leading-none"
+        >
+          404
+        </span>
+      </div>
+
+      <div class="relative z-10 flex flex-col items-center max-w-2xl">
+        <h1
+          class="font-headline font-extrabold text-4xl md:text-6xl text-white tracking-tight mb-6 animate-fade-in-up stagger-1 uppercase"
+          data-i18n="error404.title"
+        >
+          Data Point Not Found
+        </h1>
+
+        <p
+          class="font-body text-base md:text-xl text-[#94A3B8] leading-relaxed mb-12 max-w-lg animate-fade-in-up stagger-2"
+          data-i18n="error404.message"
+        >
+          The page you are looking for is an
+          <span class="text-primary font-bold">outlier</span>. It either moved
+          or never existed in our dataset.
+        </p>
+
+        <div class="animate-fade-in-up stagger-3">
+          <a
+            class="btn-primary"
+            href="index.html"
+            data-i18n="error404.btn"
+            aria-label="Return to Sarah Sabouni's portfolio homepage"
+          >
+            RETURN TO BASE
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="absolute bottom-10 w-full text-center z-10">
+      <div class="flex flex-col items-center gap-4">
+        <div class="hidden md:flex items-center text-[14px]">
+          <button
+            class="text-[#FFFFFF] font-bold cursor-pointer lang-toggle focus:outline-none  "
+            id="lang-en"
+            onclick="switchLanguage('en')"
+            aria-pressed="true"
+          >
+            EN
+          </button>
+          <span class="text-[#94A3B8] mx-[12px]" aria-hidden="true">|</span>
+          <button
+            class="text-[#94A3B8] font-normal cursor-pointer hover:text-white transition-colors lang-toggle focus:outline-none  "
+            id="lang-de"
+            onclick="switchLanguage('de')"
+            aria-pressed="false"
+          >
+            DE
+          </button>
+        </div>
+        <div class="flex justify-center gap-4">
+          <a
+            class="text-[14px] font-extrabold tracking-tighter text-[#94A3B8] uppercase hover:text-[#A78BFA] transition-colors duration-300"
+            href="index.html"
+            aria-label=" Return to Sarah Sabouni's portfolio homepage"
+          >
+            ©
+            <span id="year"></span>
+            SARAH SABOUNI
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/translations.js"></script>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
