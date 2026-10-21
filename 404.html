@@ -11,6 +11,7 @@
       name="keywords"
       content="Data Science, Machine Learning, Sarah Sabouni"
     />
+    <meta name="robots" content="noindex, follow" />
     <title>404: Page Not Found | Sarah Sabouni</title>
     <link
       rel="icon"
@@ -77,6 +78,26 @@
         box-shadow: 0 0 20px rgba(167, 139, 250, 0.3) !important;
         transform: scale(1.05) !important;
       }
+      @keyframes glitch {
+        0% {
+          transform: translate(-50%, -50%) skew(0deg);
+        }
+        20% {
+          transform: translate(-52%, -48%) skew(2deg);
+          opacity: 0.3;
+        }
+        40% {
+          transform: translate(-48%, -52%) skew(-2deg);
+          opacity: 0.5;
+        }
+        100% {
+          transform: translate(-50%, -50%) skew(0deg);
+        }
+      }
+
+      .text-outline {
+        animation: glitch 3s infinite alternate-reverse;
+      }
       .text-outline {
         -webkit-text-stroke: 2px rgba(167, 139, 250, 0.1);
         color: transparent;
@@ -96,7 +117,9 @@
     </style>
   </head>
 
-  <body class="font-body antialiased overflow-hidden bg-background">
+  <body
+    class="font-body antialiased overflow-hidden bg-background text-[#dee5ff]"
+  >
     <main
       class="relative flex flex-col items-center justify-center min-h-screen px-6 text-center"
     >
@@ -104,7 +127,7 @@
         class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none z-0"
       >
         <span
-          class="font-headline font-extrabold text-[25vw] md:text-[35vw] text-outline opacity-50"
+          class="font-headline font-extrabold text-[50vw] md:text-[35vw] text-outline opacity-20 leading-none"
         >
           404
         </span>
@@ -112,39 +135,69 @@
 
       <div class="relative z-10 flex flex-col items-center max-w-2xl">
         <h1
-          class="font-headline font-extrabold text-5xl text-white tracking-tight mb-6 animate-fade-in-up stagger-1 font-black uppercase"
+          class="font-headline font-extrabold text-4xl md:text-6xl text-white tracking-tight mb-6 animate-fade-in-up stagger-1 uppercase"
+          data-i18n="error404.title"
         >
           Data Point Not Found
         </h1>
 
         <p
-          class="font-body text-lg md:text-xl text-[#94A3B8] leading-relaxed mb-12 max-w-lg animate-fade-in-up stagger-2"
+          class="font-body text-base md:text-xl text-[#94A3B8] leading-relaxed mb-12 max-w-lg animate-fade-in-up stagger-2"
+          data-i18n="error404.message"
         >
-          The page you are looking for is an outlier. It either moved or never
-          existed in our dataset.
+          The page you are looking for is an
+          <span class="text-primary font-bold">outlier</span>. It either moved
+          or never existed in our dataset.
         </p>
 
         <div class="animate-fade-in-up stagger-3">
-          <a class="btn-primary" href="index.html" aria_label="Back to Home">
-            BACK TO HOME
+          <a
+            class="btn-primary"
+            href="index.html"
+            data-i18n="error404.btn"
+            aria-label="Return to Sarah Sabouni's portfolio homepage"
+          >
+            RETURN TO BASE
           </a>
         </div>
       </div>
     </main>
 
     <footer class="absolute bottom-10 w-full text-center z-10">
-      <div class="flex justify-center gap-4">
-        <a
-          class="text-[14px] font-extrabold tracking-tighter text-[#94A3B8] uppercase hover:text-[#A78BFA] transition-colors duration-300"
-          href="index.html"
-          aria_label="Sarah Sabouni Home"
-        >
-          ©
-          <span id="year"></span>
-          SARAH SABOUNI
-        </a>
+      <div class="flex flex-col items-center gap-4">
+        <div class="hidden md:flex items-center text-[14px]">
+          <button
+            class="text-[#FFFFFF] font-bold cursor-pointer lang-toggle focus:outline-none  "
+            id="lang-en"
+            onclick="switchLanguage('en')"
+            aria-pressed="true"
+          >
+            EN
+          </button>
+          <span class="text-[#94A3B8] mx-[12px]" aria-hidden="true">|</span>
+          <button
+            class="text-[#94A3B8] font-normal cursor-pointer hover:text-white transition-colors lang-toggle focus:outline-none  "
+            id="lang-de"
+            onclick="switchLanguage('de')"
+            aria-pressed="false"
+          >
+            DE
+          </button>
+        </div>
+        <div class="flex justify-center gap-4">
+          <a
+            class="text-[14px] font-extrabold tracking-tighter text-[#94A3B8] uppercase hover:text-[#A78BFA] transition-colors duration-300"
+            href="index.html"
+            aria-label=" Return to Sarah Sabouni's portfolio homepage"
+          >
+            ©
+            <span id="year"></span>
+            SARAH SABOUNI
+          </a>
+        </div>
       </div>
     </footer>
+    <script src="js/translations.js"></script>
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();

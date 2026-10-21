@@ -11,7 +11,12 @@
       name="keywords"
       content="Data Science, Machine Learning, Sarah Sabouni"
     />
-    <title>Privacy Policy | Sarah Sabouni</title>
+    <title>Privacy Policy | Sarah Sabouni - Data Scientist</title>
+    <!-- <link rel="canonical" href="https://sarahsabouni.com/privacy.html" /> -->
+    <!-- <link rel="alternate" hreflang="en" href="https://sarahsabouni.com/privacy.html" />
+<link rel="alternate" hreflang="de" href="https://sarahsabouni.com/privacy.html" />
+<link rel="alternate" hreflang="x-default" href="https://sarahsabouni.com/privacy.html" /> -->
+
     <link
       rel="icon"
       type="image/svg+xml"
@@ -180,6 +185,26 @@
         transition: all 0.2s ease-in-out;
       }
     </style>
+    <!-- <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sarah Sabouni",
+        "jobTitle": "Data Scientist",
+        "url": "https://sarahsabouni.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/sarah-sabouni-56058220a",
+          "https://github.com/sarahsabouni96"
+        ],
+        "knowsAbout": [
+          "Data Science",
+          "Machine Learning",
+          "Artificial Intelligence",
+          "Data Visualization",
+          "Data Analytics"
+        ]
+      }
+    </script> -->
   </head>
   <body class="font-body selection:bg-primary/30 min-h-screen flex flex-col">
     <header
@@ -190,7 +215,9 @@
           <div
             class="text-[20px] md:text-[22px] font-[800] tracking-tighter text-white uppercase flex items-center"
           >
-            <a class="" href="#hero" aria-label="Back to top">SARAH SABOUNI</a>
+            <a class="" href="index.html" aria-label="Back to top"
+              >SARAH SABOUNI</a
+            >
           </div>
           <div
             class="hidden md:flex items-center gap-8 text-[16px] font-[500] absolute left-1/2 -translate-x-1/2"
@@ -222,19 +249,23 @@
             >
           </div>
           <div class="hidden md:flex items-center text-[14px]">
-            <span
-              class="text-[#FFFFFF] font-bold cursor-pointer lang-toggle"
+            <button
+              class="text-[#FFFFFF] font-bold cursor-pointer lang-toggle focus:outline-none "
               id="lang-en"
               onclick="switchLanguage('en')"
-              >EN</span
+              aria-pressed="true"
             >
-            <span class="text-[#94A3B8] mx-[12px]">|</span>
-            <span
-              class="text-[#94A3B8] font-normal cursor-pointer hover:text-white transition-colors lang-toggle"
+              EN
+            </button>
+            <span class="text-[#94A3B8] mx-[12px]" aria-hidden="true">|</span>
+            <button
+              class="text-[#94A3B8] font-normal cursor-pointer hover:text-white transition-colors lang-toggle focus:outline-none "
               id="lang-de"
               onclick="switchLanguage('de')"
-              >DE</span
+              aria-pressed="false"
             >
+              DE
+            </button>
           </div>
           <button class="md:hidden text-white p-2" id="menu-toggle">
             <span class="material-symbols-outlined text-[32px]">menu</span>
@@ -300,7 +331,7 @@
           EN
         </button>
 
-        <span class="text-[#334155] opacity-40">|</span>
+        <span class="text-[#334155] opacity-40" aria-hidden="true">|</span>
 
         <button
           id="mobile-lang-de"
@@ -317,6 +348,7 @@
           <a
             class="inline-flex items-center text-[#94A3B8] hover:text-[#A78BFA] transition-all duration-300 text-sm font-medium group"
             href="index.html"
+            aria-label="Return to Sarah Sabouni's portfolio homepage"
           >
             <span class="mr-2 transition-transform group-hover:-translate-x-1"
               >←</span
@@ -333,7 +365,7 @@
         </h1>
 
         <div class="space-y-16">
-          <section class="fade-in-up [animation-delay:100ms]">
+          <section class="reveal [animation-delay:100ms]">
             <h2
               class="text-white font-headline text-xl md:text-2xl font-bold mb-5 tracking-tight"
               data-i18n="privacy_page.section1_title"
@@ -351,7 +383,7 @@
             </div>
           </section>
 
-          <section class="fade-in-up [animation-delay:200ms]">
+          <section class="reveal [animation-delay:200ms]">
             <h2
               class="text-white font-headline text-xl md:text-2xl font-bold mb-5 tracking-tight"
               data-i18n="privacy_page.section2_title"
@@ -367,7 +399,7 @@
               monitors your behavior.
             </div>
           </section>
-          <section class="fade-in-up [animation-delay:250ms]">
+          <section class="reveal [animation-delay:250ms]">
             <h2
               class="text-white font-headline text-xl md:text-2xl font-bold mb-5 tracking-tight"
               data-i18n="privacy_page.section3_title"
@@ -400,8 +432,8 @@
           <div class="flex justify-center md:justify-start">
             <a
               class="text-[14px] font-extrabold tracking-tighter text-[#94A3B8] uppercase hover:text-[#A78BFA] transition-colors duration-300"
-              href="#hero"
-              aria-label="Back to top"
+              href="index.html"
+              aria-label="Return to Sarah Sabouni's portfolio homepage"
             >
               © <span id="year"></span> SARAH SABOUNI
             </a>
@@ -416,10 +448,10 @@
               >
               <a
                 class="text-[#94A3B8] font-bold hover:text-[#A78BFA] transition-colors duration-300"
-                href="https://www.linkedin.com/in/razan-azizieh-9a1b4b1a5"
+                href="https://www.linkedin.com/in/razan-azizieh-b683511ba"
                 rel="noopener noreferrer"
                 target="_blank"
-                aria-label="Visit Razan Azizieh's LinkedIn Profile"
+                aria-label="Visit Razan Azizieh's LinkedIn Profile (opens in a new tab)"
               >
                 RAZAN AZIZIEH
               </a>
@@ -440,12 +472,15 @@
               Legal Notice
             </a>
 
-            <span class="text-[#94A3B8] opacity-20 mx-4">|</span>
+            <span class="text-[#94A3B8] opacity-20 mx-4" aria-hidden="true"
+              >|</span
+            >
 
             <span
               class="text-[#A78BFA] text-[16px] font-[500] capitalize transition-colors duration-300 hover:text-[#A78BFA]"
               data-i18n="footer.privacy"
               aria-label="You are currently viewing the Privacy Policy"
+              aria-current="page"
             >
               Privacy Policy
             </span>
@@ -499,16 +534,12 @@
     </script>
 
     <script>
-      // في الصفحات الفرعية، نكتفي فقط بإزالة التمييز (Active State)
-      // لأن الروابط تشير إلى صفحة أخرى (index.html)
-
       const navLinks = document.querySelectorAll(".nav-link");
       const mobileLinks = document.querySelectorAll(".mobile-link");
 
       function resetActiveLinks() {
         const allLinks = [...navLinks, ...mobileLinks];
         allLinks.forEach((link) => {
-          // إزالة كل كلاسات النشاط (اللون النهدي، الخطوط، البوردر)
           link.classList.remove(
             "text-[#A78BFA]",
             "border-b-2",
@@ -517,16 +548,11 @@
             "border-l-4",
             "pl-4",
           );
-          // إعادة اللون الرمادي الطبيعي
           link.classList.add("text-[#94A3B8]");
         });
       }
 
-      // تنفيذ الإلغاء بمجرد تحميل الصفحة
       document.addEventListener("DOMContentLoaded", resetActiveLinks);
-
-      // ملاحظة: حذفنا الـ IntersectionObserver تماماً هنا
-      // وحذفنا مستمع التمرير (scroll event) لمنع تلوين Contact تلقائياً
     </script>
 
     <script>

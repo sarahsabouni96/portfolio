@@ -8,8 +8,11 @@ const translations = {
       project3: "Case Study: Vehicle Market | Sarah Sabouni",
       project4: "Case Study: Mood Classifier | Sarah Sabouni",
       project5: "Case Study: Sales Intelligence | Sarah Sabouni",
-      privacy: "Privacy Policy | Sarah Sabouni",
-      legal: "Legal Notice | Sarah Sabouni",
+      project6:
+        "Case Study: Interactive Higher Education Cost Analysis | Sarah Sabouni",
+      privacy: "Privacy Policy | Sarah Sabouni - Data Scientist",
+      legal: "Legal Notice & Impressum | Sarah Sabouni - Data Scientist",
+      error404: "404: Page Not Found | Sarah Sabouni",
     },
     nav: {
       home: "Home",
@@ -18,7 +21,7 @@ const translations = {
       contact: "Contact",
     },
     hero: {
-      badge: "LIVE: PURSUING DATA INTELLIGENCE IN GERMANY",
+      badge: "Live: Data Science in Germany",
       title:
         'Transforming Data into Actionable <span class="text-[#A78BFA]">Insights</span>',
       subtitle:
@@ -93,8 +96,8 @@ const translations = {
         music: {
           title: "AI Music Mood Classifier",
         },
-        sales: {
-          title: "Sales Dashboard (Power BI)",
+        europe_cost: {
+          title: "Studying in Europe: Cost Overview (Power BI)",
         },
       },
     },
@@ -106,7 +109,7 @@ const translations = {
       label: "GET IN TOUCH",
       title: "Let’s build intelligent systems that shape a smarter future",
       subtitle:
-        "Currently open to research collaborations and professional opportunities in Germany and remotely",
+        "Currently open to Data Science research collaborations and Machine Learning opportunities in Germany or remotely",
       button: "GET IN TOUCH",
     },
     footer: {
@@ -119,7 +122,7 @@ const translations = {
     // pages
     projects_page: {
       back_home: "Back to Home",
-      hero_title: "Ausgewählte <span class='text-primary'>Projekte</span>",
+      hero_title: "Selected <span class='text-primary'>Projects</span>",
       hero_subtitle:
         "A showcase of data-driven research and machine learning implementations. These projects reflect my journey through Master's studies, focusing on building predictive models and transforming complex data into meaningful insights.",
       filters: {
@@ -149,6 +152,10 @@ const translations = {
         sales: {
           title: "Executive Sales Intelligence",
           desc: "Interactive Power BI dashboard using DAX and Power Query to transform raw retail data into actionable business KPIs and regional insights.",
+        },
+        europe_cost: {
+          title: "Studying in Europe: Cost Overview",
+          desc: "Interactive Power BI dashboard analyzing higher education tuition, living costs, and country affordability across Europe.",
         },
       },
       cta_view: "VIEW CASE STUDY",
@@ -205,11 +212,11 @@ const translations = {
         location_tag:
           "Case Study: Predicting Medical Insurance Charges with Linear Regression",
 
-        context_title: "Context",
+        context_title: "The Context",
         context_p:
           "Medical insurance costs are influenced by multiple demographic and lifestyle factors, making accurate cost estimation valuable for both insurers and individuals.",
 
-        objective_title: "Objective",
+        objective_title: "The Objective",
         objective_p:
           "Develop a machine learning model to predict medical insurance charges based on demographic and health-related features, while comparing a custom implementation in PyTorch with a baseline model in scikit-learn.",
 
@@ -256,11 +263,11 @@ const translations = {
         location_tag:
           "Case Study: Used Car Price Estimation with Linear Regression",
 
-        context_title: "Context",
+        context_title: "The Context",
         context_p:
           "Pricing used cars accurately is important for both buyers and sellers, yet vehicle prices depend on multiple interacting factors such as age, mileage, brand, and condition.",
 
-        objective_title: "Objective",
+        objective_title: "The Objective",
         objective_p:
           "Develop a machine learning model to predict used car prices based on vehicle characteristics, while comparing a custom implementation in PyTorch with a standard model in scikit-learn.",
 
@@ -304,11 +311,11 @@ const translations = {
           "Predicting the mood of a song using neural networks and audio features.",
         location_tag: "Case Study: Music Mood Prediction with Deep Learning",
 
-        context_title: "Context",
+        context_title: "The Context",
         context_p:
           "Music platforms increasingly rely on automated mood detection to enhance user experience. Accurately classifying the mood of a song requires understanding complex audio patterns.",
 
-        objective_title: "Objective",
+        objective_title: "The Objective",
         objective_p:
           "Develop a machine learning system that classifies songs into four moods — sad, happy, energetic, or calm — based on numerical audio features extracted from each track.",
 
@@ -353,11 +360,11 @@ const translations = {
           "Transforming sales data into actionable business insights with Power BI.",
         location_tag: "Case Study: Interactive Sales Performance Analysis",
 
-        context_title: "Context",
+        context_title: "The Context",
         context_p:
           "Retail businesses generate large volumes of data, but turning it into clear operational insights is challenging. Understanding sales trends and regional behavior is essential for profitability.",
 
-        objective_title: "Objective",
+        objective_title: "The Objective",
         objective_p:
           "Develop an interactive BI dashboard to analyze sales, profit, and shipping performance. The goal was to identify high-performing products and operational opportunities.",
 
@@ -389,6 +396,45 @@ const translations = {
         takeaway:
           "Takeaway: This project highlights my ability to use business intelligence to communicate insights and support strategic decision-making.",
       },
+      // project6
+      europe_cost: {
+        label: "Data Visualization & Dashboards Case Study",
+        title: "Studying in Europe: Cost Overview",
+        subtitle:
+          "Transforming international education cost data into actionable insights with Power BI.",
+        location_tag: "Case Study: Interactive Higher Education Cost Analysis",
+        context_title: "The Context",
+        context_p:
+          "Studying abroad is a major financial decision for international students. Tuition fees, accommodation costs, insurance, and visa expenses vary significantly between countries and universities, making it difficult to compare study destinations effectively.",
+        objective_title: "The Objective",
+        objective_p:
+          "Develop an interactive BI dashboard to analyze and compare the overall cost of studying in Europe. The goal was to identify affordable destinations, understand cost patterns, and support students in making informed educational decisions.",
+        approach_title: "The Approach",
+        approach_p:
+          "I designed an interactive dashboard in Power BI using Power Query for data preparation and DAX for calculating custom measures such as average program cost and counts of countries and universities. The dashboard structure enables filtering by country, degree level, and institution while supporting geographic and financial comparisons.",
+        results_title: "Results & Performance",
+        impact_label: "Strategic Impact",
+        impact_p:
+          "The dashboard provides a comprehensive overview of study-related expenses across Europe. It enables users to quickly identify cost differences between countries, evaluate tuition and living expenses, and explore universities and programs through interactive visualizations.",
+        tools_label: "BI Tools Used",
+        insight_title: "Insights & Future Work",
+        insight_label: "BI Case Study Insight",
+        insight_p:
+          "This study demonstrates how interactive dashboards can simplify complex educational cost data and support evidence-based decision making. By combining financial indicators with geographic information, users gain a clearer understanding of the affordability of higher education in Europe.",
+        roadmap_title: "The Roadmap",
+        roadmap_item1:
+          "Integrating scholarship and financial aid information to improve affordability analysis.",
+        roadmap_item2:
+          "Adding inflation-adjusted cost projections and forecasting models.",
+        roadmap_item3:
+          "Connecting live data sources to monitor changes in tuition fees and living expenses in real time.",
+        github_title: "Project Repository & Documentation",
+        github_p:
+          "Explore the full project on GitHub, including the Power BI source file and data model.",
+        github_btn: "VIEW REPOSITORY ON GITHUB",
+        takeaway:
+          "Takeaway: This project highlights my ability to use data visualization, business intelligence, and dashboard design to communicate insights and support strategic decision-making.",
+      },
     },
     legal: {
       back: "Back to Home",
@@ -417,6 +463,12 @@ const translations = {
       section3_text:
         "Links to LinkedIn, GitHub, and Kaggle are provided for professional networking. Their respective privacy policies apply once you navigate away.",
     },
+    error404: {
+      title: "Data Point Not Found",
+      message:
+        "The page you are looking for is an <span class='text-primary font-bold'>outlier</span>. It either moved or never existed in our dataset.",
+      btn: "RETURN TO BASE",
+    },
   },
   de: {
     titles: {
@@ -427,8 +479,11 @@ const translations = {
       project3: "Fallstudie: Fahrzeugmarkt | Sarah Sabouni",
       project4: "Fallstudie: Stimmungsklassifizierung | Sarah Sabouni",
       project5: "Fallstudie: Verkaufsanalyse | Sarah Sabouni",
-      privacy: "Datenschutzerklärung | Sarah Sabouni",
-      legal: "Impressum | Sarah Sabouni",
+      project6:
+        "Fallstudie: Interaktive Analyse der Kosten für Hochschulbildung | Sarah Sabouni",
+      privacy: "Datenschutzerklärung | Sarah Sabouni - Data Scientist",
+      legal: "Impressum | Sarah Sabouni - Data Scientist",
+      error404: "404: Seite nicht gefunden | Sarah Sabouni",
     },
     nav: {
       home: "Startseite",
@@ -437,7 +492,7 @@ const translations = {
       contact: "Kontakt",
     },
     hero: {
-      badge: "LIVE: DATENINTELLIGENZ IN DEUTSCHLAND ANSTREBEN",
+      badge: "Live: Data Science in Deutschland",
       title:
         'Daten in handlungsorientierte <span class="text-[#A78BFA]">Erkenntnisse</span> verwandeln',
       subtitle:
@@ -450,8 +505,8 @@ const translations = {
     about: {
       label: "HINTERGRUND",
       title: "Über mich",
-      p1: 'Ich bin Masterstudentin an der TU Chemnitz mit dem Schwerpunkt <span class="text-white font-bold">Data Science</span>. Mein fundierter Hintergrund in <span class="text-white font-bold">Mathematik</span> prägt meinen analytischen Ansatz zur Problemlösung. Im Studium habe ich Expertise in <span class="text-white font-semibold">Optimierung</span>, <span class="text-white font-semibold">Machine Learning</span>, <span class="text-white font-semibold">statistischer Modellierung</span> und <span class="text-white font-semibold">Datenanalyse</span> aufgebaut.',
-      p2: "Mein Weg hat zudem meine Resilienz und Anpassungsfähigkeit gestärkt. Ich interessiere mich besonders dafür, Data Science zu nutzen, um komplexe Systeme zu verstehen und praktische, wirkungsvolle Lösungen für den Alltag zu entwickeln.",
+      p1: 'Ich bin Masterstudentin an der TU Chemnitz mit Schwerpunkt <span class="text-white font-bold">Data Science</span>. Mein fundierter Hintergrund in <span class="text-white font-bold">Mathematik</span> prägt meinen analytischen und strukturierten Ansatz zur Lösung komplexer Probleme. Im Rahmen meines Studiums habe ich fundierte Kenntnisse in <span class="text-white font-semibold">Optimierung</span>, <span class="text-white font-semibold">Machine Learning</span>, <span class="text-white font-semibold">statistischer Modellierung</span> und <span class="text-white font-semibold">Datenanalyse</span> erworben.',
+      p2: "Mein persönlicher Werdegang hat meine Resilienz und Anpassungsfähigkeit nachhaltig gestärkt. Besonders interessiert mich der Einsatz von Data Science, um komplexe Systeme zu verstehen und praxisnahe, wirkungsvolle Lösungen für reale Herausforderungen zu entwickeln.",
       view_cv: "LEBENSLAUF ANSEHEN",
       cv_path: "Sarah_Sabouni_CV_DE.pdf",
     },
@@ -459,12 +514,12 @@ const translations = {
       label: "FÄHIGKEITEN & TECHNOLOGIEN",
       title: "Kernkompetenzen",
       card1: {
-        title: "Machine Learning & KI",
+        title: "Machine Learning & Künstliche Intelligenz",
         points: [
-          "Modellentwicklung und Evaluierung",
+          "Entwicklung und Evaluierung von Modellen",
           "Neuronale Netze (Grundlagen bis Fortgeschrittene, inkl. ANN/CNN)",
-          "Adaptive und Online-Lernansätze",
-          "End-to-End ML-Workflows",
+          "Adaptive und Online-Lernverfahren",
+          "End-to-End-ML-Workflows",
         ],
         tech: "Python, PyTorch, scikit-learn",
       },
@@ -472,31 +527,31 @@ const translations = {
         title: "Datenanalyse & Statistik",
         points: [
           "Explorative Datenanalyse (EDA)",
-          "Statistische Modellierung & Tests",
-          "Datenbereinigung und Vorverarbeitung",
-          "Ausreißererkennung & Qualitätsprüfung",
+          "Statistische Modellierung und Hypothesentests",
+          "Datenbereinigung und -vorverarbeitung",
+          "Ausreißererkennung und Qualitätsprüfung",
         ],
         tech: "Python, NumPy, Pandas, SQL",
       },
       card3: {
-        title: "BI, Visualisierung & Kommunikation",
+        title: "Business Intelligence, Visualisierung & Kommunikation",
         points: [
-          "Dashboard-Entwicklung und visual Reporting",
-          "KPI-Definition und Performance-Tracking",
-          "Data Storytelling und Insight-Kommunikation",
-          "Präsentation für technisches und nicht-technisches Publikum",
+          "Entwicklung von Dashboards und visuelles Reporting",
+          "Definition von KPIs und Performance-Tracking",
+          "Data Storytelling und Kommunikation von Erkenntnissen",
+          "Präsentation von Ergebnissen für technisches und nicht-technisches Publikum",
         ],
         tech: "Power BI, Power Query, DAX, Matplotlib",
       },
       card4: {
         title: "Optimierung & Mathematische Modellierung",
         points: [
-          "Formulierung von Optimierungsproblemen",
-          "Lineare und nicht-lineare Techniken",
+          "Formulierung von Optimierungsproblemen (Zielfunktionen, Nebenbedingungen)",
+          "Lineare und nichtlineare Optimierungsverfahren",
           "Mathematische Modellierung realer Systeme",
-          "Optimierung für prädiktive Modelle",
+          "Optimierung für prädiktive und datengetriebene Modelle",
         ],
-        tech: "Python, NumPy, Optimization Libs",
+        tech: "Python, NumPy, Optimierungsbibliotheken",
       },
     },
     projects: {
@@ -513,8 +568,8 @@ const translations = {
         music: {
           title: "KI-Musik-Stimmungsklassifizierer",
         },
-        sales: {
-          title: "Verkaufs-Dashboard (Power BI)",
+        europe_cost: {
+          title: "Studieren in Europa: Kostenübersicht (Power BI)",
         },
       },
     },
@@ -527,7 +582,7 @@ const translations = {
       title:
         "Lassen Sie uns intelligente Systeme bauen, die eine smartere Zukunft gestalten",
       subtitle:
-        "Derzeit offen für Forschungskooperationen und berufliche Möglichkeiten in Deutschland oder Remote",
+        "Derzeit offen für Forschungskooperationen im Bereich Data Science sowie Karrieremöglichkeiten im Bereich Machine Learning – in Deutschland oder remote",
       button: "KONTAKTIEREN",
     },
     footer: {
@@ -570,6 +625,10 @@ const translations = {
         sales: {
           title: "Executive Sales Intelligence",
           desc: "Interaktives Power BI-Dashboard unter Verwendung von DAX und Power Query zur Transformation von Einzelhandelsdaten in geschäftskritische KPIs.",
+        },
+        europe_cost: {
+          title: "Studieren in Europa: Kostenübersicht",
+          desc: "Interaktives Power BI-Dashboard zur Analyse von Studiengebühren, Lebenshaltungskosten und der Erschwinglichkeit von Ländern in Europa.",
         },
       },
       cta_view: "FALLSTUDIE ANSEHEN",
@@ -817,6 +876,46 @@ const translations = {
         takeaway:
           "Fazit: Dieses Projekt unterstreicht meine Fähigkeit, Business Intelligence zu nutzen, um strategische Entscheidungen zu unterstützen.",
       },
+      // project6
+      europe_cost: {
+        label: "Fallstudie: Datenvisualisierung und Dashboards",
+        title: "Studieren in Europa: Kostenübersicht",
+        subtitle:
+          "Transformation von Daten zu internationalen Bildungskosten in aussagekräftige Erkenntnisse mit Power BI.",
+        location_tag:
+          "Fallstudie: Interaktive Analyse der Kosten für Hochschulbildung",
+        context_title: "Der Kontext",
+        context_p:
+          "Ein Studium im Ausland ist für internationale Studierende eine bedeutende finanzielle Entscheidung. Studiengebühren, Unterkunftskosten, Versicherungen und Visagebühren unterscheiden sich erheblich zwischen Ländern und Universitäten, was einen effektiven Vergleich von Studienstandorten erschwert.",
+        objective_title: "Das Ziel",
+        objective_p:
+          "Entwicklung eines interaktiven BI-Dashboards zur Analyse und zum Vergleich der Gesamtkosten eines Studiums in Europa. Ziel war es, kostengünstige Studienziele zu identifizieren, Kostenmuster zu verstehen und Studierende bei fundierten Bildungsentscheidungen zu unterstützen.",
+        approach_title: "Der Ansatz",
+        approach_p:
+          "Ich entwickelte ein interaktives Dashboard in Power BI und nutzte Power Query zur Datenaufbereitung sowie DAX zur Berechnung benutzerdefinierter Kennzahlen, wie beispielsweise der durchschnittlichen Programmkosten sowie der Anzahl von Ländern und Universitäten. Die Struktur des Dashboards ermöglicht Filterungen nach Land, Abschlussniveau und Hochschule und unterstützt gleichzeitig geografische sowie finanzielle Vergleiche.",
+        results_title: "Ergebnisse & Leistung",
+        impact_label: "Strategischer Mehrwert",
+        impact_p:
+          "Das Dashboard bietet einen umfassenden Überblick über studienbezogene Ausgaben in Europa. Es ermöglicht den Nutzern, Kostenunterschiede zwischen Ländern schnell zu erkennen, Studien- und Lebenshaltungskosten zu bewerten sowie Universitäten und Studienprogramme mithilfe interaktiver Visualisierungen zu erkunden.",
+        tools_label: "Verwendete BI-Werkzeuge",
+        insight_title: "Erkenntnisse & zukünftige Arbeiten",
+        insight_label: "Erkenntnisse aus der BI-Fallstudie",
+        insight_p:
+          "Diese Studie zeigt, wie interaktive Dashboards komplexe Daten zu Bildungskosten vereinfachen und eine evidenzbasierte Entscheidungsfindung unterstützen können. Durch die Kombination finanzieller Kennzahlen mit geografischen Informationen erhalten Nutzer ein klareres Verständnis der Erschwinglichkeit von Hochschulbildung in Europa.",
+        roadmap_title: "Die Roadmap",
+        roadmap_item1:
+          "Integration von Informationen zu Stipendien und finanziellen Fördermöglichkeiten zur Verbesserung der Analyse der Erschwinglichkeit.",
+        roadmap_item2:
+          "Erweiterung um inflationsbereinigte Kostenprognosen und Vorhersagemodelle.",
+        roadmap_item3:
+          "Anbindung von Live-Datenquellen, um Veränderungen bei Studiengebühren und Lebenshaltungskosten in Echtzeit zu überwachen.",
+        github_title: "Technische Umsetzung & Quellcode",
+        github_p:
+          "Erkunden Sie das gesamte Projekt auf GitHub, einschließlich der Power BI-Quelldatei und des Datenmodells.",
+        github_btn: "REPOSITORY AUF GITHUB ANSEHEN",
+        takeaway:
+          "Fazit: Dieses Projekt unterstreicht meine Fähigkeit, Datenvisualisierung, Business Intelligence und Dashboard-Design zu nutzen, um Erkenntnisse zu vermitteln und strategische Entscheidungen zu unterstützen.",
+      },
     },
     legal: {
       back: "Zurück zur Startseite",
@@ -844,6 +943,12 @@ const translations = {
       section3_title: "Links zu Drittanbietern",
       section3_text:
         "Links zu LinkedIn, GitHub und Kaggle dienen der beruflichen Vernetzung. Sobald Sie die Seite verlassen, gelten die jeweiligen Datenschutzbestimmungen dieser Anbieter.",
+    },
+    error404: {
+      title: "Datenpunkt nicht gefunden",
+      message:
+        "Die von Ihnen gesuchte Seite ist ein <span class='text-primary font-bold'>Ausreißer</span>. Sie wurde entweder verschoben oder existierte nie in unserem Datensatz.",
+      btn: "ZURÜCK ZUR BASIS",
     },
   },
 };
@@ -906,6 +1011,8 @@ function switchLanguage(lang) {
     document.title = translations[lang].titles.project4;
   } else if (path.includes("project5-casestudy")) {
     document.title = translations[lang].titles.project5;
+  } else if (path.includes("404")) {
+    document.title = translations[lang].titles.error404;
   } else {
     document.title = translations[lang].titles.home;
   }

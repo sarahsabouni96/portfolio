@@ -320,6 +320,26 @@
         transition: all 0.2s ease-in-out;
       }
     </style>
+    <!-- <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sarah Sabouni",
+        "jobTitle": "Data Scientist",
+        "url": "https://sarahsabouni.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/sarah-sabouni-56058220a",
+          "https://github.com/sarahsabouni96"
+        ],
+        "knowsAbout": [
+          "Data Science",
+          "Machine Learning",
+          "Artificial Intelligence",
+          "Data Visualization",
+          "Data Analytics"
+        ]
+      }
+    </script> -->
   </head>
   <body
     class="bg-[#060E20] text-[#a3aac4] font-body selection:bg-primary/30 min-h-screen flex flex-col"
@@ -332,7 +352,9 @@
           <div
             class="text-[20px] md:text-[22px] font-[800] tracking-tighter text-white uppercase flex items-center"
           >
-            <a class="" href="#hero" aria-label="Back to top">SARAH SABOUNI</a>
+            <a class="" href="index.html" aria-label="Back to top"
+              >SARAH SABOUNI</a
+            >
           </div>
           <div
             class="hidden md:flex items-center gap-8 text-[16px] font-[500] absolute left-1/2 -translate-x-1/2"
@@ -364,19 +386,23 @@
             >
           </div>
           <div class="hidden md:flex items-center text-[14px]">
-            <span
-              class="text-[#FFFFFF] font-bold cursor-pointer lang-toggle"
+            <button
+              class="text-[#FFFFFF] font-bold cursor-pointer lang-toggle focus:outline-none"
               id="lang-en"
               onclick="switchLanguage('en')"
-              >EN</span
+              aria-pressed="true"
             >
-            <span class="text-[#94A3B8] mx-[12px]">|</span>
-            <span
-              class="text-[#94A3B8] font-normal cursor-pointer hover:text-white transition-colors lang-toggle"
+              EN
+            </button>
+            <span class="text-[#94A3B8] mx-[12px]" aria-hidden="true">|</span>
+            <button
+              class="text-[#94A3B8] font-normal cursor-pointer hover:text-white transition-colors lang-toggle focus:outline-none"
               id="lang-de"
               onclick="switchLanguage('de')"
-              >DE</span
+              aria-pressed="false"
             >
+              DE
+            </button>
           </div>
           <button class="md:hidden text-white p-2" id="menu-toggle">
             <span class="material-symbols-outlined text-[32px]">menu</span>
@@ -438,7 +464,7 @@
           EN
         </button>
 
-        <span class="text-[#334155] opacity-40">|</span>
+        <span class="text-[#334155] opacity-40" aria-hidden="true">|</span>
 
         <button
           id="mobile-lang-de"
@@ -454,6 +480,7 @@
         <a
           class="inline-flex items-center text-[#94A3B8] hover:text-[#A78BFA] transition-all duration-300 text-sm font-medium group"
           href="index.html"
+          aria-label="Return to Sarah Sabouni's portfolio homepage"
         >
           <span class="mr-2 transition-transform group-hover:-translate-x-1"
             >←</span
@@ -537,7 +564,8 @@
         >
           <div class="aspect-video relative overflow-hidden bg-slate-950">
             <img
-              alt="NO2 Prediction"
+              alt="Visual representation of Air Quality forecasting model for NO2 levels using Machine Learning"
+              loading="lazy"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               src="assets/images/Air quality prediction with machine learning.png"
             />
@@ -570,6 +598,7 @@
               target="_blank"
               class="w-full"
               rel="noopener noreferrer"
+              aria-label="View Case Study for Online NO2 Forecasting project (opens in a new tab)"
             >
               <button
                 class="w-full btn-secondary py-2.5 md:py-3"
@@ -587,9 +616,10 @@
         >
           <div class="aspect-video relative overflow-hidden bg-slate-950">
             <img
-              alt="Medical Insurance"
+              alt="Data visualization of healthcare cost regression analysis using PyTorch and Scikit-Learn to predict medical insurance charges"
+              loading="lazy"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              src="assets/images/Medical.png"
+              src="assets/images/medical.png"
             />
             <div
               class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"
@@ -620,6 +650,7 @@
               rel="noopener noreferrer"
               target="_blank"
               class="w-full"
+              aria-label="View Case Study for Healthcare Cost Regression project (opens in a new tab)"
             >
               <button
                 class="w-full btn-secondary py-2.5 md:py-3"
@@ -637,9 +668,10 @@
         >
           <div class="aspect-video relative overflow-hidden bg-slate-950">
             <img
-              alt="Used Car Price"
+              alt="Machine learning pipeline interface for used car market value estimation featuring feature engineering and data transformations"
+              loading="lazy"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              src="assets/images/Car.png"
+              src="assets/images/car.png"
             />
             <div
               class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"
@@ -670,6 +702,7 @@
               rel="noopener noreferrer"
               target="_blank"
               class="w-full"
+              aria-label="View Case Study for Vehicle Market Estimation project (opens in a new tab)"
             >
               <button
                 class="w-full btn-secondary py-2.5 md:py-3"
@@ -687,7 +720,8 @@
         >
           <div class="aspect-video relative overflow-hidden bg-slate-950">
             <img
-              alt="AI Music Mood Classifier"
+              alt="Deep learning neural network visualization for audio track mood classification and emotional vector mapping"
+              loading="lazy"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               src="assets/images/AI music mood classification visualization.png"
             />
@@ -720,6 +754,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="w-full"
+              aria-label="View Case Study for Deep Mood Classifier project (opens in a new tab)"
             >
               <button
                 class="w-full btn-secondary py-2.5 md:py-3"
@@ -737,7 +772,8 @@
         >
           <div class="aspect-video relative overflow-hidden bg-slate-950">
             <img
-              alt="Superstore Sales"
+              alt="Interactive Sales Intelligence Dashboard created with Power BI and DAX"
+              loading="lazy"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               src="assets/images/Superstore Sales Dashboard.png"
             />
@@ -770,6 +806,58 @@
               target="_blank"
               rel="noopener noreferrer"
               class="w-full"
+              aria-label="View Case Study for Executive Sales Intelligence project (opens in a new tab)"
+            >
+              <button
+                class="w-full btn-secondary py-2.5 md:py-3"
+                data-i18n="projects_page.cta_view"
+              >
+                View Case Study
+              </button></a
+            >
+          </div>
+        </article>
+        <!-- Project 6 -->
+        <article
+          class="project-card reveal active border border-white/5 rounded-xl overflow-hidden flex flex-col group bg-[#162033] h-full"
+          data-category="data-viz"
+        >
+          <div class="aspect-video relative overflow-hidden bg-slate-950">
+            <img
+              alt="Studying in Europe: Cost Overview Power BI Dashboard"
+              loading="lazy"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              src="assets/images/Studying in Europe-Cost Overview.png"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"
+            ></div>
+          </div>
+          <div class="p-6 md:p-8 flex flex-col flex-grow">
+            <span
+              class="text-[0.65rem] font-bold uppercase tracking-widest text-primary mb-3 md:mb-4 block"
+              data-i18n="projects_page.filters.dv"
+              >Data Visualization</span
+            >
+            <h3
+              class="text-lg md:text-xl font-headline font-bold text-white mb-2 md:mb-3"
+              data-i18n="projects_page.items.europe_cost.title"
+            >
+              Studying in Europe: Cost Overview
+            </h3>
+            <p
+              class="text-[#a3aac4] text-sm leading-relaxed mb-6 md:mb-8 flex-grow line-clamp-3 min-h-[4.5rem]"
+              data-i18n="projects_page.items.europe_cost.desc"
+            >
+              Interactive Power BI dashboard analyzing higher education tuition,
+              living costs, and country affordability across Europe.
+            </p>
+            <a
+              href="Projects/project6-casestudy.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full"
+              aria-label="View Case Study for Studying in Europe project (opens in a new tab)"
             >
               <button
                 class="w-full btn-secondary py-2.5 md:py-3"
@@ -798,8 +886,8 @@
           <div class="flex justify-center md:justify-start">
             <a
               class="text-[14px] font-extrabold tracking-tighter text-[#94A3B8] uppercase hover:text-[#A78BFA] transition-colors duration-300"
-              href="#hero"
-              aria-label="Back to top"
+              href="index.html"
+              aria-label="Return to Sarah Sabouni's portfolio homepage"
             >
               © <span id="year"></span> SARAH SABOUNI
             </a>
@@ -814,10 +902,10 @@
               >
               <a
                 class="text-[#94A3B8] font-bold hover:text-[#A78BFA] transition-colors duration-300"
-                href="https://www.linkedin.com/in/razan-azizieh-9a1b4b1a5"
+                href="https://www.linkedin.com/in/razan-azizieh-b683511ba"
                 rel="noopener noreferrer"
                 target="_blank"
-                aria-label="Visit Razan Azizieh's LinkedIn Profile"
+                aria-label="Visit Razan Azizieh's LinkedIn Profile (opens in a new tab)"
               >
                 RAZAN AZIZIEH
               </a>
@@ -838,7 +926,9 @@
               Legal Notice
             </a>
 
-            <span class="text-[#94A3B8] opacity-20 mx-4">|</span>
+            <span class="text-[#94A3B8] opacity-20 mx-4" aria-hidden="true"
+              >|</span
+            >
 
             <a
               class="text-[#94A3B8] text-[16px] font-[500] capitalize transition-colors duration-300 hover:text-[#A78BFA]"

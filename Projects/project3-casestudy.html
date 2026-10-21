@@ -11,6 +11,18 @@
       name="keywords"
       content="Data Science, Machine Learning, Sarah Sabouni"
     />
+    <meta name="author" content="Sarah Sabouni" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Case Study: Vehicle Market | Sarah Sabouni"
+    />
+    <meta
+      property="og:description"
+      content="End-to-end regression pipeline featuring advanced feature engineering and log-transformations to estimate used car market values."
+    />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:url" content="https://yourdomain.com/projects/vehicle market" /> -->
     <title>Case Study: Vehicle Market | Sarah Sabouni</title>
     <link
       rel="icon"
@@ -108,6 +120,17 @@
         padding: 0;
         overflow-x: hidden;
       }
+      .font-body {
+        color: #a3aac4 !important;
+        line-height: 1.7;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #ffffff !important;
+        font-family: "Manrope", sans-serif;
+      }
       .material-symbols-outlined {
         font-variation-settings:
           "FILL" 0,
@@ -187,18 +210,7 @@
       .pulse-animation {
         animation: pulse-click 0.2s ease-out;
       }
-      p,
-      .font-body {
-        color: #a3aac4 !important;
-        line-height: 1.7;
-      }
-      h1,
-      h2,
-      h3,
-      h4 {
-        color: #ffffff !important;
-        font-family: "Manrope", sans-serif;
-      }
+
       .text-white,
       .btn-secondary,
       span.text-white,
@@ -254,10 +266,16 @@
         transition: all 0.2s ease-in-out;
       }
     </style>
+    <!-- <script type="application/ld+json">
+      {
+        
+     
+      }
+    </script> -->
   </head>
 
   <body
-    class="bg-[#060e20] text-[#dee5ff] selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"
+    class="bg-[#060e20] text-[#dee5ff] font-body selection:text-on-primary-container selection:bg-primary-container min-h-screen flex flex-col"
   >
     <header
       class="h-[80px] bg-[#0F172A]/80 backdrop-blur-[10px] sticky top-0 w-full z-50 flex items-center border-b border-white/10"
@@ -267,7 +285,12 @@
           <div
             class="text-[20px] md:text-[22px] font-[800] tracking-tighter text-white uppercase flex items-center"
           >
-            <a class="" href="#hero" aria-label="Back to top">SARAH SABOUNI</a>
+            <a
+              class=""
+              href="../index.html"
+              aria-label="Return to Sarah Sabouni's portfolio homepage"
+              >SARAH SABOUNI</a
+            >
           </div>
           <div
             class="hidden md:flex items-center gap-8 text-[16px] font-[500] absolute left-1/2 -translate-x-1/2"
@@ -299,19 +322,23 @@
             >
           </div>
           <div class="hidden md:flex items-center text-[14px]">
-            <span
-              class="text-[#FFFFFF] font-bold cursor-pointer lang-toggle"
+            <button
+              class="text-[#FFFFFF] font-bold cursor-pointer lang-toggle focus:outline-none"
               id="lang-en"
               onclick="switchLanguage('en')"
-              >EN</span
+              aria-pressed="true"
             >
-            <span class="text-[#94A3B8] mx-[12px]">|</span>
-            <span
-              class="text-[#94A3B8] font-normal cursor-pointer hover:text-white transition-colors lang-toggle"
+              EN
+            </button>
+            <span class="text-[#94A3B8] mx-[12px]" aria-hidden="true">|</span>
+            <button
+              class="text-[#94A3B8] font-normal cursor-pointer hover:text-white transition-colors lang-toggle focus:outline-none"
               id="lang-de"
               onclick="switchLanguage('de')"
-              >DE</span
+              aria-pressed="false"
             >
+              DE
+            </button>
           </div>
           <button class="md:hidden text-white p-2" id="menu-toggle">
             <span class="material-symbols-outlined text-[32px]">menu</span>
@@ -339,24 +366,28 @@
         <a
           class="mobile-link text-[#94A3B8] hover:text-[#A78BFA] transition-colors duration-300"
           href="../index.html#hero"
+          data-i18n="nav.home"
           onclick="closeMenu()"
           >Home</a
         >
         <a
           class="mobile-link text-[#94A3B8] hover:text-[#A78BFA] transition-colors duration-300"
           href="../index.html#about"
+          data-i18n="nav.about"
           onclick="closeMenu()"
           >About</a
         >
         <a
           class="mobile-link text-[#94A3B8] hover:text-[#A78BFA] transition-colors duration-300"
           href="../index.html#projects"
+          data-i18n="nav.projects"
           onclick="closeMenu()"
           >Projects</a
         >
         <a
           class="mobile-link text-[#94A3B8] hover:text-[#A78BFA] transition-colors duration-300"
-          href="index.html#contact"
+          href="../index.html#contact"
+          data-i18n="nav.contact"
           onclick="closeMenu()"
           >Contact</a
         >
@@ -373,7 +404,7 @@
           EN
         </button>
 
-        <span class="text-[#334155] opacity-40">|</span>
+        <span class="text-[#334155] opacity-40" aria-hidden="true">|</span>
 
         <button
           id="mobile-lang-de"
@@ -385,22 +416,21 @@
       </div>
     </div>
 
-    <main class="content-container pt-12 md:pt-24 pb-24 flex-grow">
+    <main class="content-container pt-12 md:pt-24 flex-grow">
       <div class="mb-12 fade-in-up">
         <a
           class="inline-flex items-center text-[#94A3B8] hover:text-[#A78BFA] transition-all duration-300 text-sm font-medium group"
-          href="index.html"
+          href="../index.html"
+          aria-label="Return to Sarah Sabouni's portfolio homepage"
         >
           <span class="mr-2 transition-transform group-hover:-translate-x-1"
             >←</span
           >
-          <span data-i18n="project_details.car_prediction.back_link"
-            >Back to Home</span
-          >
+          <span data-i18n="projects_page.back_home">Back to Home</span>
         </a>
       </div>
 
-      <header class="mb-20 max-w-4xl">
+      <header class="mb-20 md:mb-32 max-w-4xl">
         <h2
           class="section-sub-heading mb-4 reveal"
           data-i18n="project_details.car_prediction.label"
@@ -408,13 +438,13 @@
           Machine Learning Case Study
         </h2>
 
-        <h3
+        <h1
           class="text-3xl md:text-5xl lg:text-6xl font-headline font-bold text-white mb-8 reveal leading-[1.15] tracking-tight"
           data-i18n="project_details.car_prediction.title"
         >
           Used Car Price <br class="hidden md:block" />
           Prediction
-        </h3>
+        </h1>
 
         <div class="space-y-4 reveal">
           <p
@@ -435,14 +465,14 @@
       </header>
 
       <section
-        class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 mb-32 items-start"
+        class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 mb-20 md:mb-32 items-start"
       >
         <div class="md:col-span-7 reveal">
           <h3
             class="font-headline font-bold text-white text-xl mb-6 uppercase tracking-wider"
             data-i18n="project_details.car_prediction.context_title"
           >
-            Context
+            The Context
           </h3>
           <p
             class="text-[#a3aac4] leading-relaxed text-base font-body"
@@ -461,7 +491,7 @@
               class="font-headline font-bold text-white text-xl mb-6 uppercase tracking-wider"
               data-i18n="project_details.car_prediction.objective_title"
             >
-              Objective
+              The Objective
             </h3>
             <p
               class="font-body text-lg leading-relaxed text-slate-300 italic"
@@ -478,9 +508,11 @@
         </div>
       </section>
 
-      <hr class="border-white/5 mb-32" />
+      <hr class="border-white/5 mb-20 md:mb-32" />
 
-      <section class="mb-32">
+      <!-- The Approach sec -->
+
+      <section class="mb-20 md:mb-32">
         <div class="mb-12">
           <h3
             class="font-headline font-bold text-white text-3xl mb-8 reveal"
@@ -545,18 +577,18 @@ learning_rate = <span class="text-orange-400">0.01</span>
         </div>
       </section>
 
-      <hr class="border-white/5 mb-32" />
+      <hr class="border-white/5 mb-20 md:mb-32" />
 
-      <section class="mb-32">
+      <!-- Results & Performance & Metric Accuracy & Analysis sec -->
+
+      <section class="mb-20 md:mb-32">
         <h3
           class="font-headline font-bold text-white text-3xl mb-12 reveal"
           data-i18n="project_details.car_prediction.results_title"
         >
           Results & Performance
         </h3>
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-white/10 pt-12"
-        >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div class="reveal">
             <span
               class="text-xs font-bold tracking-[0.2em] text-violet-400 uppercase block mb-4"
@@ -604,7 +636,9 @@ learning_rate = <span class="text-orange-400">0.01</span>
         </div>
       </section>
 
-      <section class="mb-32">
+      <!-- insight & roadmap sec -->
+
+      <section class="mb-20 md:mb-32">
         <h3
           class="font-headline font-bold text-white text-3xl mb-12 reveal"
           data-i18n="project_details.car_prediction.insights_title"
@@ -637,7 +671,9 @@ learning_rate = <span class="text-orange-400">0.01</span>
             </h4>
             <ul class="space-y-4">
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-violet-400 text-xl"
+                <span
+                  class="material-symbols-outlined text-violet-400 text-xl"
+                  aria-hidden="true"
                   >add_circle</span
                 >
                 <span
@@ -647,7 +683,9 @@ learning_rate = <span class="text-orange-400">0.01</span>
                 >
               </li>
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-violet-400 text-xl"
+                <span
+                  class="material-symbols-outlined text-violet-400 text-xl"
+                  aria-hidden="true"
                   >add_circle</span
                 >
                 <span
@@ -658,7 +696,9 @@ learning_rate = <span class="text-orange-400">0.01</span>
                 >
               </li>
               <li class="flex items-start gap-3">
-                <span class="material-symbols-outlined text-violet-400 text-xl"
+                <span
+                  class="material-symbols-outlined text-violet-400 text-xl"
+                  aria-hidden="true"
                   >add_circle</span
                 >
                 <span
@@ -673,7 +713,9 @@ learning_rate = <span class="text-orange-400">0.01</span>
         </div>
       </section>
 
-      <section class="text-center py-24 border-t border-white/5 reveal">
+      <section
+        class="text-center py-20 md:py-32 border-t border-white/5 reveal"
+      >
         <h2
           class="font-headline font-bold text-white text-2xl mb-6"
           data-i18n="project_details.car_prediction.github_title"
@@ -699,7 +741,7 @@ learning_rate = <span class="text-orange-400">0.01</span>
         </a>
       </section>
 
-      <footer class="py-12 text-center border-t border-white/5">
+      <footer class="py-20 md:py-32 text-center border-t border-white/5">
         <p
           class="font-body text-sm tracking-wide italic text-slate-500 max-w-2xl mx-auto"
           data-i18n="project_details.car_prediction.takeaway"
@@ -712,12 +754,14 @@ learning_rate = <span class="text-orange-400">0.01</span>
     </main>
 
     <button
-      class="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-11 h-11 flex items-center justify-center bg-[#1E293B]/50 backdrop-blur-md border border-[#A78BFA]/20 rounded-xl text-[#A78BFA] z-[60] transition-all duration-300 shadow-lg hover:border-[#A78BFA]/50 hover:bg-[#A78BFA] hover:text-white hover:-translate-y-1.5 hover:shadow-[0_0_20px_rgba(167,139,250,0.2)] group active:scale-90"
+      class="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-11 h-11 flex items-center justify-center bg-transparent backdrop-blur-md border border-[#A78BFA]/30 rounded-xl text-[#A78BFA] z-[60] transition-all duration-300 shadow-sm hover:bg-[#A78BFA] hover:text-white hover:-translate-y-1.5 hover:shadow-[0_0_20px_rgba(167,139,250,0.3)] group active:scale-90"
       id="back-to-top"
+      aria-label="Scroll back to top"
       onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
     >
       <span
         class="material-symbols-outlined !text-[20px] -rotate-90 transition-transform duration-300 group-hover:scale-110"
+        aria-hidden="true"
       >
         east
       </span>
@@ -730,48 +774,62 @@ learning_rate = <span class="text-orange-400">0.01</span>
         >
           <div class="flex justify-center md:justify-start">
             <a
-              class="text-[14px] font-extrabold tracking-tighter text-[#94A3B8] uppercase hover:text-[#A78BFA] transition-colors duration-300 font-headline"
+              class="text-[14px] font-extrabold tracking-tighter text-[#94A3B8] uppercase hover:text-[#A78BFA] transition-colors duration-300"
               href="../index.html"
-              aria-label="Back to home page"
+              aria-label="Return to Sarah Sabouni's portfolio homepage"
             >
               © <span id="year"></span> SARAH SABOUNI
             </a>
           </div>
+
           <div class="flex justify-center order-3 md:order-2">
             <div
-              class="text-[12px] flex items-center gap-2 tracking-wider text-[#94A3B8] uppercase font-label"
+              class="text-[12px] flex items-center gap-2 tracking-wider text-[#94A3B8] uppercase"
             >
               <span class="opacity-70" data-i18n="footer.developed_by"
                 >DEVELOPED BY</span
               >
               <a
                 class="text-[#94A3B8] font-bold hover:text-[#A78BFA] transition-colors duration-300"
-                href="https://www.linkedin.com/in/razan-azizieh-9a1b4b1a5"
+                href="https://www.linkedin.com/in/razan-azizieh-b683511ba"
+                rel="noopener noreferrer"
                 target="_blank"
-                aria-label="Visit Razan Azizieh's LinkedIn Profile"
+                title="Visit LinkedIn Profile"
+                aria-label="Visit Razan Azizieh's LinkedIn Profile (opens in a new tab)"
               >
                 RAZAN AZIZIEH
               </a>
             </div>
           </div>
+
           <div
-            class="flex justify-center md:justify-end order-2 md:order-3 items-center font-label"
+            class="flex justify-center md:justify-end order-2 md:order-3 items-center"
           >
             <a
-              class="text-[#94A3B8] text-[15px] font-[500] capitalize transition-colors duration-300 hover:text-[#A78BFA]"
-              href="../legal.html"
+              class="text-[#94A3B8] text-[16px] font-[500] capitalize transition-colors duration-300 hover:text-[#A78BFA]"
               data-i18n="footer.legal"
+              href="../legal.html"
+              rel="noopener noreferrer"
+              target="_blank"
               aria-label="View Legal Notice"
-              >Legal Notice</a
             >
-            <span class="text-[#94A3B8] opacity-20 mx-4">|</span>
+              Legal Notice
+            </a>
+
+            <span class="text-[#94A3B8] opacity-20 mx-4" aria-hidden="true"
+              >|</span
+            >
+
             <a
-              class="text-[#94A3B8] text-[15px] font-[500] capitalize transition-colors duration-300 hover:text-[#A78BFA]"
-              href="../privacy.html"
+              class="text-[#94A3B8] text-[16px] font-[500] capitalize transition-colors duration-300 hover:text-[#A78BFA]"
               data-i18n="footer.privacy"
+              href="../privacy.html"
+              rel="noopener noreferrer"
+              target="_blank"
               aria-label="View Privacy Policy"
-              >Privacy Policy</a
             >
+              Privacy Policy
+            </a>
           </div>
         </div>
       </div>

@@ -7,11 +7,23 @@
       name="description"
       content="Sarah Sabouni - Data Scientist specializing in Machine Learning."
     />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sarah Sabouni | Data Scientist" />
+    <meta
+      property="og:description"
+      content="Specializing in Machine Learning."
+    />
+    <meta property="og:image" content="images/og-image.jpg" />
     <meta
       name="keywords"
       content="Data Science, Machine Learning, Sarah Sabouni"
     />
     <title>Sarah Sabouni | Data Scientist</title>
+    <!-- <link rel="canonical" href="https://sarahsabouni.com/" />
+<link rel="alternate" hreflang="en" href="https://sarahsabouni.com/" />
+<link rel="alternate" hreflang="de" href="https://sarahsabouni.com/" />
+<link rel="alternate" hreflang="x-default" href="https://sarahsabouni.com/" /> -->
+
     <link
       rel="icon"
       type="image/svg+xml"
@@ -359,6 +371,12 @@
       span.text-[#A78BFA] {
         text-shadow: 0 0 10px rgba(167, 139, 250, 0.2);
       }
+      .contact-sec h3,
+      .contact-sec p {
+        white-space: normal;
+        overflow-wrap: break-word;
+        text-wrap: pretty;
+      }
     </style>
     <!-- swiper -->
     <link
@@ -383,8 +401,34 @@
         margin-top: 40px !important;
       }
     </style>
+    <!-- <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sarah Sabouni",
+        "jobTitle": "Data Scientist",
+        "url": "https://sarahsabouni.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/sarah-sabouni-56058220a",
+          "https://github.com/sarahsabouni96"
+        ],
+        "knowsAbout": [
+          "Data Science",
+          "Machine Learning",
+          "Artificial Intelligence",
+          "Data Visualization",
+          "Data Analytics"
+        ]
+      }
+    </script> -->
   </head>
   <body class="selection:bg-primary/30">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-[#A78BFA] focus:text-white focus:px-4 focus:py-2 focus:rounded-md shadow-lg"
+    >
+      Skip to main content
+    </a>
     <header
       class="h-[80px] bg-[#0F172A]/80 backdrop-blur-[10px] sticky top-0 w-full z-50 flex items-center border-b border-white/10"
     >
@@ -393,7 +437,7 @@
           <div
             class="text-[20px] md:text-[22px] font-[800] tracking-tighter text-white uppercase flex items-center"
           >
-            <a class="" href="#hero" aria-label="Back to top">SARAH SABOUNI</a>
+            <a class="" href="#" aria-label="Back to top">SARAH SABOUNI</a>
           </div>
 
           <div
@@ -427,22 +471,30 @@
           </div>
 
           <div class="hidden md:flex items-center text-[14px]">
-            <span
-              class="text-[#FFFFFF] font-bold cursor-pointer lang-toggle"
+            <button
+              class="text-[#FFFFFF] font-bold cursor-pointer lang-toggle focus:outline-none"
               id="lang-en"
               onclick="switchLanguage('en')"
-              >EN</span
+              aria-pressed="true"
             >
-            <span class="text-[#94A3B8] mx-[12px]">|</span>
-            <span
-              class="text-[#94A3B8] font-normal cursor-pointer hover:text-white transition-colors lang-toggle"
+              EN
+            </button>
+            <span class="text-[#94A3B8] mx-[12px]" aria-hidden="true">|</span>
+            <button
+              class="text-[#94A3B8] font-normal cursor-pointer hover:text-white transition-colors lang-toggle focus:outline-none"
               id="lang-de"
               onclick="switchLanguage('de')"
-              >DE</span
+              aria-pressed="false"
             >
+              DE
+            </button>
           </div>
 
-          <button class="md:hidden text-white p-2" id="menu-toggle">
+          <button
+            class="md:hidden text-white p-2"
+            id="menu-toggle"
+            aria-label="Open Menu"
+          >
             <span class="material-symbols-outlined text-[32px]">menu</span>
           </button>
         </nav>
@@ -506,7 +558,7 @@
           EN
         </button>
 
-        <span class="text-[#334155] opacity-40">|</span>
+        <span class="text-[#334155] opacity-40" aria-hidden="true">|</span>
 
         <button
           id="mobile-lang-de"
@@ -517,7 +569,7 @@
         </button>
       </div>
     </div>
-    <main>
+    <main id="main-content">
       <!-- Hero -->
       <section
         class="relative py-12 md:py-32 flex flex-col justify-center items-center overflow-visible bg-[#060e20]"
@@ -561,7 +613,7 @@
               <span
                 class="text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.2em] font-label font-semibold text-primary"
                 data-i18n="hero.badge"
-                >Live: Pursuing Data SCIENCE in Germany</span
+                >Live: Data Science in Germany</span
               >
             </div>
             <h1
@@ -586,9 +638,10 @@
               <a
                 class="btn-primary w-full sm:w-auto min-w-[220px] reveal"
                 data-i18n="hero.download_cv"
-                download=""
+                download="Sarah_Sabouni_Data_Scientist_CV.pdf"
                 href="Sarah_Sabouni_CV_EN.pdf"
-                aria-label="Download Sarah's CV"
+                aria-label="Download CV in PDF format"
+                title="Download Sarah Sabouni's Data Science Curriculum Vitae (PDF)"
                 >Download CV</a
               >
               <a
@@ -603,7 +656,7 @@
         </div>
       </section>
       <!-- About -->
-      <section class="bg-[#060e20] py-12 md:py-20" id="about">
+      <section class="bg-[#060e20] py-16 md:py-24" id="about">
         <div class="content-container">
           <div
             class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center"
@@ -616,6 +669,8 @@
               >
                 <svg
                   class="w-full h-full max-w-full opacity-30 svg-continuous-float"
+                  aria-hidden="true"
+                  role="presentation"
                   viewbox="0 0 400 400"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -758,7 +813,7 @@
                 <div
                   class="space-y-6 text-[#a3aac4] font-body leading-relaxed text-base md:text-lg"
                 >
-                  <div class="reveal justified-text" data-i18n="about.p1">
+                  <p class="reveal justified-text" data-i18n="about.p1">
                     I am a master’s student at TU Chemnitz specializing in
                     <span class="text-[#A78BFA] font-bold">data science</span>,
                     with a strong background in
@@ -777,7 +832,7 @@
                       >real-world data analysis</span
                     >. I enjoy uncovering patterns in complex data and turning
                     them into meaningful insights.
-                  </div>
+                  </p>
 
                   <p class="reveal justified-text" data-i18n="about.p2">
                     My journey has also strengthened my resilience and
@@ -805,7 +860,7 @@
       </section>
       <!-- Skillls -->
       <section
-        class="bg-[#0F172A] py-12 md:py-20 expertise-section"
+        class="bg-[#0F172A] py-16 md:py-24 expertise-section"
         id="expertise"
       >
         <div class="content-container">
@@ -829,6 +884,8 @@
           >
             <div
               class="group relative p-8 md:p-10 rounded-xl bg-[#1E293B]/50 border border-[#A78BFA]/10 backdrop-blur-sm expertise-card flex flex-col h-full reveal transition-all duration-300 hover:border-[#A78BFA]/30 hover:shadow-[0_0_20px_rgba(167,139,250,0.05)]"
+              role="region"
+              aria-labelledby="ml-title"
             >
               <div class="mb-6 text-[#A78BFA]">
                 <svg
@@ -842,6 +899,8 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   class="transition-all group-hover:scale-110"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <path
                     d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"
@@ -857,8 +916,10 @@
                   <path d="M10 9h4" />
                   <path d="M10 22h4" />
                 </svg>
+                <span class="sr-only">Machine Learning Icon</span>
               </div>
               <h4
+                id="ml-title"
                 class="text-2xl font-headline font-bold text-white mb-6 leading-tight"
                 data-i18n="skills.card1.title"
               >
@@ -870,12 +931,14 @@
               >
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] mt-2 shrink-0"
                   ></span>
                   <span>Model development and evaluation</span>
                 </li>
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] mt-2 shrink-0"
                   ></span>
                   <span
@@ -885,12 +948,14 @@
                 </li>
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] mt-2 shrink-0"
                   ></span>
                   <span>Adaptive and online learning approaches</span>
                 </li>
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] mt-2 shrink-0"
                   ></span>
                   <span>End-to-end machine learning workflows</span>
@@ -906,6 +971,8 @@
 
             <div
               class="group relative p-8 md:p-10 rounded-xl bg-[#1E293B]/50 border border-[#A78BFA]/10 backdrop-blur-sm expertise-card flex flex-col h-full reveal transition-all duration-300 hover:border-[#A78BFA]/30 hover:shadow-[0_0_20px_rgba(167,139,250,0.05)]"
+              aria-labelledby="stats-title"
+              role="region"
             >
               <div class="mb-6 text-[#A78BFA]">
                 <svg
@@ -919,13 +986,19 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   class="transition-all group-hover:scale-110"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <ellipse cx="12" cy="5" rx="9" ry="3" />
                   <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
                   <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
                 </svg>
+                <span class="sr-only"
+                  >Data Analysis & Statistical Modeling Icon</span
+                >
               </div>
               <h4
+                id="stats-title"
                 class="text-2xl font-headline font-bold text-white mb-6 leading-tight"
                 data-i18n="skills.card2.title"
               >
@@ -937,24 +1010,28 @@
               >
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] mt-2 shrink-0"
                   ></span>
                   <span>Exploratory data analysis (EDA)</span>
                 </li>
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] mt-2 shrink-0"
                   ></span>
                   <span>Statistical modeling and hypothesis testing</span>
                 </li>
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] mt-2 shrink-0"
                   ></span>
                   <span>Data cleaning and preprocessing</span>
                 </li>
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] shrink-0 mt-2"
                   ></span>
                   <span>Outlier detection and data quality assessment</span>
@@ -969,6 +1046,8 @@
             </div>
 
             <div
+              aria-labelledby="bi-title"
+              role="region"
               class="group relative p-8 md:p-10 rounded-xl bg-[#1E293B]/50 border border-[#A78BFA]/10 backdrop-blur-sm expertise-card flex flex-col h-full reveal transition-all duration-300 hover:border-[#A78BFA]/30 hover:shadow-[0_0_20px_rgba(167,139,250,0.05)]"
             >
               <div class="mb-6 text-[#A78BFA]">
@@ -983,13 +1062,19 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   class="transition-all group-hover:scale-110"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <line x1="18" y1="20" x2="18" y2="10" />
                   <line x1="12" y1="20" x2="12" y2="4" />
-                  <line x1="6" y1="20" x2="6" y2="14" />
-                </svg>
+                  <line x1="6" y1="20" x2="6" y2="14" /></svg
+                ><span class="sr-only"
+                  >Business Intelligence, Visualization & Communication
+                  Icon</span
+                >
               </div>
               <h4
+                id="bi-title"
                 class="text-2xl font-headline font-bold text-white mb-6 leading-tight"
                 data-i18n="skills.card3.title"
               >
@@ -1001,24 +1086,28 @@
               >
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] shrink-0 mt-2"
                   ></span>
                   <span>Dashboard development and visual reporting</span>
                 </li>
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] shrink-0 mt-2"
                   ></span>
                   <span>KPI definition and performance tracking</span>
                 </li>
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] shrink-0 mt-2"
                   ></span>
                   <span>Data storytelling and insight communication</span>
                 </li>
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] mt-2 shrink-0"
                   ></span>
                   <span
@@ -1036,6 +1125,8 @@
             </div>
 
             <div
+              aria-labelledby="opt-title"
+              role="region"
               class="group relative p-8 md:p-10 rounded-xl bg-[#1E293B]/50 border border-[#A78BFA]/10 backdrop-blur-sm expertise-card flex flex-col h-full reveal transition-all duration-300 hover:border-[#A78BFA]/30 hover:shadow-[0_0_20px_rgba(167,139,250,0.05)]"
             >
               <div class="mb-6 text-[#A78BFA]">
@@ -1050,13 +1141,18 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   class="transition-all group-hover:scale-110"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
                   <line x1="12" y1="3" x2="12" y2="21" />
-                  <line x1="3" y1="12" x2="21" y2="12" />
-                </svg>
+                  <line x1="3" y1="12" x2="21" y2="12" /></svg
+                ><span class="sr-only"
+                  >Optimization & Mathematical Modeling Icon</span
+                >
               </div>
               <h4
+                id="opt-title"
                 class="text-2xl font-headline font-bold text-white mb-6 leading-tight"
                 data-i18n="skills.card4.title"
               >
@@ -1068,6 +1164,7 @@
               >
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] mt-2 shrink-0"
                   ></span>
                   <span
@@ -1077,18 +1174,21 @@
                 </li>
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] shrink-0 mt-2"
                   ></span>
                   <span>Linear and non-linear optimization techniques</span>
                 </li>
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] shrink-0 mt-2"
                   ></span>
                   <span>Mathematical modeling of real-world systems</span>
                 </li>
                 <li class="flex items-start gap-3 leading-relaxed">
                   <span
+                    aria-hidden="true"
                     class="w-1.5 h-1.5 rounded-full bg-[#A78BFA] shrink-0 mt-2"
                   ></span>
                   <span
@@ -1107,7 +1207,7 @@
         </div>
       </section>
       <!-- Projects -->
-      <section class="py-12 md:py-20 bg-[#0F172A]" id="projects">
+      <section class="bg-[#0F172A] py-16 md:py-24" id="projects">
         <style>
           .project-card-custom {
             background: rgba(30, 41, 59, 0.5) !important;
@@ -1156,11 +1256,9 @@
             </h3>
           </div>
 
-          <div
-            class="grid grid-cols-1 md:grid-cols-12 gap-6 md:auto-rows-[300px]"
-          >
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
             <div
-              class="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-xl project-card-custom reveal h-[400px] md:h-auto"
+              class="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-xl project-card-custom reveal h-[350px] md:h-[624px]"
             >
               <div class="absolute inset-0 project-image-wrap">
                 <img
@@ -1184,23 +1282,20 @@
                   data-i18n="projects.items.no2.description"
                 >
                   An online machine learning system that continuously predicts
-                  and adapts to hourly NO₂ fluctuations using live environmental
-                  data.
+                  and adapts to hourly NO₂ fluctuations.
                 </p>
                 <a
                   class="btn-secondary !py-2 !px-4 !text-[12px]"
                   href="Projects/project1-casestudy.html"
-                  rel="noopener noreferrer"
                   target="_blank"
                   data-i18n="projects.view_case_study"
-                  aria-label="View project's Case Study in a new tab"
                   >View Case Study</a
                 >
               </div>
             </div>
 
             <div
-              class="md:col-span-4 md:row-span-1 group relative overflow-hidden rounded-xl project-card-custom reveal h-[300px]"
+              class="md:col-span-4 md:row-span-1 group relative overflow-hidden rounded-xl project-card-custom reveal h-[350px] md:h-[300px]"
             >
               <div class="absolute inset-0 project-image-wrap">
                 <img
@@ -1222,23 +1317,21 @@
                 <a
                   class="btn-secondary !py-2 !px-4 !text-[12px]"
                   href="Projects/project4-casestudy.html"
-                  rel="noopener noreferrer"
                   target="_blank"
                   data-i18n="projects.view_case_study"
-                  aria-label="View project's Case Study in a new tab"
                   >View Case Study</a
                 >
               </div>
             </div>
 
             <div
-              class="md:col-span-4 md:row-span-1 group relative overflow-hidden rounded-xl project-card-custom reveal h-[300px]"
+              class="md:col-span-4 md:row-span-1 group relative overflow-hidden rounded-xl project-card-custom reveal h-[350px] md:h-[300px]"
             >
               <div class="absolute inset-0 project-image-wrap">
                 <img
-                  alt="Superstore Sales Dashboard"
+                  alt="Studying in Europe Cost Overview Dashboard"
                   class="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity"
-                  src="assets/images/Superstore Sales Dashboard.png"
+                  src="assets/images/Studying in Europe-Cost Overview.png"
                 />
               </div>
               <div
@@ -1247,17 +1340,15 @@
               <div class="absolute bottom-0 left-0 w-full p-6 z-10">
                 <h4
                   class="text-lg font-headline font-bold text-white mb-4"
-                  data-i18n="projects.items.sales.title"
+                  data-i18n="projects.items.europe_cost.title"
                 >
-                  Sales Dashboard (Power BI)
+                  Studying in Europe: Cost Overview (Power BI)
                 </h4>
                 <a
                   class="btn-secondary !py-2 !px-4 !text-[12px]"
-                  href="Projects/project5-casestudy.html"
-                  rel="noopener noreferrer"
+                  href="Projects/project6-casestudy.html"
                   target="_blank"
                   data-i18n="projects.view_case_study"
-                  aria-label="View project's Case Study in a new tab"
                   >View Case Study</a
                 >
               </div>
@@ -1279,7 +1370,7 @@
       </section>
       <!-- Feedbacks -->
       <section
-        class="bg-[#0F172A] py-12 md:py-20 relative overflow-hidden"
+        class="bg-[#0F172A] py-16 md:py-24 relative overflow-hidden"
         id="certifications"
       >
         <div
@@ -1341,8 +1432,9 @@
                     </div>
                     <blockquote
                       class="text-center mb-10 flex-grow relative z-10"
+                      lang="en"
                     >
-                      <p class="text-sm md:text-base" lang="en">
+                      <p class="text-sm md:text-base">
                         "Sarah Sabouni was always actively participating in
                         lecture and exercise classes. Her interest in
                         mathematical aspects of data science with economic
@@ -1354,14 +1446,14 @@
                     <div
                       class="flex flex-col items-center w-full relative z-10"
                     >
-                      <div class="text-center">
+                      <cite class="text-center">
                         <div class="text-[14px] font-bold text-white">
                           Prof. Dr. Vladimir Shikhman
                         </div>
                         <div class="text-[12px] text-[#94A3B8]">
                           Chemnitz University of Technology
                         </div>
-                      </div>
+                      </cite>
                     </div>
                   </div>
                 </div>
@@ -1388,8 +1480,9 @@
                     </div>
                     <blockquote
                       class="text-center mb-10 flex-grow relative z-10"
+                      lang="en"
                     >
-                      <p class="text-sm md:text-base" lang="en">
+                      <p class="text-sm md:text-base">
                         "It is clear to me that Sarah has a creative mind and a
                         deep understanding of the mathematics concepts. She
                         exhibits greatest pleasure to challenge herself, and she
@@ -1401,14 +1494,14 @@
                     <div
                       class="flex flex-col items-center w-full relative z-10"
                     >
-                      <div class="text-center">
+                      <cite class="text-center">
                         <div class="text-[14px] font-bold text-white">
                           Dr. Mohammad Alcheikh
                         </div>
                         <div class="text-[12px] text-[#94A3B8]">
                           Damascus University
                         </div>
-                      </div>
+                      </cite>
                     </div>
                   </div>
                 </div>
@@ -1435,8 +1528,9 @@
                     </div>
                     <blockquote
                       class="text-center mb-10 flex-grow relative z-10"
+                      lang="en"
                     >
-                      <p class="text-sm md:text-base" lang="en">
+                      <p class="text-sm md:text-base">
                         "Ms. Sabouni is a reliable and cooperative individual
                         with a professional attitude and excellent interpersonal
                         skills. I am confident that she will be a valuable asset
@@ -1449,14 +1543,14 @@
                     <div
                       class="flex flex-col items-center w-full relative z-10"
                     >
-                      <div class="text-center">
+                      <cite class="text-center">
                         <div class="text-[14px] font-bold text-white">
                           Dr. R.H Al Rabeh
                         </div>
                         <div class="text-[12px] text-[#94A3B8]">
                           Gloucester University, UK (retired)
                         </div>
-                      </div>
+                      </cite>
                     </div>
                   </div>
                 </div>
@@ -1466,6 +1560,7 @@
               >
                 <button
                   class="swiper-button-prev-custom w-10 h-10 border border-primary/40 rounded-full flex items-center justify-center text-primary opacity-50 hover:opacity-100 transition-all duration-300 relative z-10"
+                  aria-label="Prev Slide"
                 >
                   <span class="material-symbols-outlined text-[18px]"
                     >west</span
@@ -1477,6 +1572,7 @@
               >
                 <button
                   class="swiper-button-next-custom w-10 h-10 border border-primary/40 rounded-full flex items-center justify-center text-primary opacity-50 hover:opacity-100 transition-all duration-300 relative z-10"
+                  aria-label="Next Slide"
                 >
                   <span class="material-symbols-outlined text-[18px]"
                     >east</span
@@ -1491,7 +1587,7 @@
       <!-- Contact -->
       <section
         id="contact"
-        class="py-12 md:py-20 bg-[#060e20] py-20 min-h-[70vh] flex items-center"
+        class="py-16 md:py-24 bg-[#060e20] min-h-[70vh] flex items-center contact-sec"
       >
         <div class="content-container">
           <div
@@ -1521,17 +1617,17 @@
               GET IN TOUCH
             </h2>
             <h3
-              class="text-3xl md:text-4xl font-headline font-bold text-white mb-6 reveal relative z-10"
+              class="text-2xl md:text-4xl font-headline font-bold text-white mb-6 reveal relative z-10 w-full"
               data-i18n="contact.title"
             >
               Let’s build intelligent systems that shape a smarter future
             </h3>
             <p
-              class="text-[#a3aac4] mb-10 text-base md:text-lg relative z-10 reveal px-4"
+              class="text-[#a3aac4] mb-10 text-base md:text-lg relative z-10 reveal px-4 max-w-[850px] mx-auto"
               data-i18n="contact.subtitle"
             >
-              Currently open to research collaborations and professional
-              opportunities in Germany and remotely
+              Currently open to Data Science research collaborations and Machine
+              Learning opportunities in Germany or remotely
             </p>
 
             <div
@@ -1540,9 +1636,10 @@
               <a
                 class="text-[#94A3B8] hover:text-[#A78BFA] transition-all duration-300 transform hover:scale-110"
                 href="https://www.linkedin.com/in/sarah-sabouni-56058220a"
-                rel="noopener noreferrer"
                 target="_blank"
                 aria-label="LinkedIn Profile"
+                title="Visit LinkedIn Profile"
+                rel="noopener noreferrer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1561,6 +1658,7 @@
                 class="text-[#94A3B8] hover:text-[#A78BFA] transition-all duration-300 transform hover:scale-110"
                 href="https://github.com/sarahsabouni96"
                 aria-label="Github Profile"
+                title="Visit Github Profile"
                 rel="noopener noreferrer"
                 target="_blank"
               >
@@ -1581,6 +1679,7 @@
                 class="text-[#94A3B8] hover:text-[#A78BFA] transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
                 href="https://www.kaggle.com/sabounisarah"
                 rel="noopener noreferrer"
+                title="Visit Kaggle Profile"
                 aria-label="Kaggle Profile"
                 target="_blank"
               >
@@ -1604,12 +1703,14 @@
       </section>
     </main>
     <button
-      class="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-11 h-11 flex items-center justify-center bg-[#1E293B]/50 backdrop-blur-md border border-[#A78BFA]/20 rounded-xl text-[#A78BFA] z-[60] transition-all duration-300 shadow-lg hover:border-[#A78BFA]/50 hover:bg-[#A78BFA] hover:text-white hover:-translate-y-1.5 hover:shadow-[0_0_20px_rgba(167,139,250,0.2)] group active:scale-90"
+      class="fixed bottom-6 right-6 md:bottom-10 md:right-10 w-11 h-11 flex items-center justify-center bg-transparent backdrop-blur-md border border-[#A78BFA]/30 rounded-xl text-[#A78BFA] z-[60] transition-all duration-300 shadow-sm hover:bg-[#A78BFA] hover:text-white hover:-translate-y-1.5 hover:shadow-[0_0_20px_rgba(167,139,250,0.3)] group active:scale-90"
       id="back-to-top"
+      aria-label="Scroll back to top"
       onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
     >
       <span
         class="material-symbols-outlined !text-[20px] -rotate-90 transition-transform duration-300 group-hover:scale-110"
+        aria-hidden="true"
       >
         east
       </span>
@@ -1622,7 +1723,7 @@
           <div class="flex justify-center md:justify-start">
             <a
               class="text-[14px] font-extrabold tracking-tighter text-[#94A3B8] uppercase hover:text-[#A78BFA] transition-colors duration-300"
-              href="#hero"
+              href="#"
               aria-label="Back to top"
             >
               © <span id="year"></span> SARAH SABOUNI
@@ -1638,10 +1739,11 @@
               >
               <a
                 class="text-[#94A3B8] font-bold hover:text-[#A78BFA] transition-colors duration-300"
-                href="https://www.linkedin.com/in/razan-azizieh-9a1b4b1a5"
+                href="https://www.linkedin.com/in/razan-azizieh-b683511ba"
                 rel="noopener noreferrer"
                 target="_blank"
-                aria-label="Visit Razan Azizieh's LinkedIn Profile"
+                title="Visit LinkedIn Profile"
+                aria-label="Visit Razan Azizieh's LinkedIn Profile (opens in a new tab)"
               >
                 RAZAN AZIZIEH
               </a>
@@ -1662,7 +1764,9 @@
               Legal Notice
             </a>
 
-            <span class="text-[#94A3B8] opacity-20 mx-4">|</span>
+            <span class="text-[#94A3B8] opacity-20 mx-4" aria-hidden="true"
+              >|</span
+            >
 
             <a
               class="text-[#94A3B8] text-[16px] font-[500] capitalize transition-colors duration-300 hover:text-[#A78BFA]"
