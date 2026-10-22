@@ -1,47 +1,36 @@
-# Data Science & Machine Learning Portfolio — Sarah Sabouni
+# Data Science & Analytics Portfolio — Sarah Sabouni
 
-Welcome to my professional Data Science and Machine Learning showcase. This repository hosts a performance-optimized, multilingual web application built to present end-to-end Machine Learning models, predictive analytics pipelines, and interactive Business Intelligence dashboards.
-
----
-
-## 📊 Highlighted Case Studies
-
-### 1. 🎓 Studying in Europe: Cost Overview (Power BI & DAX)
-- **Focus:** Educational Cost & Affordability Analysis
-- **Tech Stack:** Power BI, DAX, Power Query, Kaggle Dataset
-- **Overview:** Interactive BI dashboard analyzing higher education tuition, living expenses, and regional affordability across Europe to support data-driven decisions for international students.
-
-### 2. 🌬️ Online NO₂ Prediction (Entropic Mirror Descent)
-- **Focus:** Environmental Time-Series Forecasting
-- **Tech Stack:** Python, Machine Learning, Real-Time Sensor APIs
-- **Overview:** An adaptive online machine learning model predicting hourly urban NO₂ fluctuations with zero retraining overhead.
-
-### 3. 🎵 Deep Mood Classifier (Neural Networks)
-- **Focus:** Audio Signal Classification & AI
-- **Tech Stack:** PyTorch, Python, Audio Feature Extraction
-- **Overview:** Multi-class Neural Network categorizing audio tracks into emotional states with high accuracy.
+Welcome to my Data Science and Analytics portfolio. This repository presents my end-to-end Machine Learning models, predictive analytics projects, and interactive Business Intelligence dashboards.
 
 ---
 
-## 🛠️ Technical Capabilities & Domain Expertise
+## 📊 Featured Projects & Case Studies
 
-- **Machine Learning & AI:** Supervised/Unsupervised Learning, Neural Networks (PyTorch), Time-Series Forecasting.
-- **Data Analytics & BI:** Power BI, DAX, Power Query, Statistical Modeling, SQL, Exploratory Data Analysis (EDA).
-- **Languages & Tools:** Python (Pandas, NumPy, Scikit-Learn), Power BI, Git, Figma.
+### 1. 🎓 Studying in Europe: Cost Overview
+- **Domain:** Higher Education & Cost Analytics
+- **Tools:** Power BI, DAX, Power Query
+- **Overview:** Interactive BI dashboard analyzing tuition fees, living expenses, and affordability patterns across European countries to assist international students in data-driven decision-making.
+
+### 2. 🌬️ Urban NO₂ Pollution Prediction
+- **Domain:** Environmental Time-Series Forecasting
+- **Tools:** Python, Machine Learning, Online Learning Algorithms
+- **Overview:** An adaptive Machine Learning model designed to forecast hourly urban nitrogen dioxide (NO₂) levels and assist environmental monitoring.
+
+### 3. 🎵 Audio Mood Classifier
+- **Domain:** Audio Processing & Machine Learning
+- **Tools:** Python, PyTorch, Feature Extraction
+- **Overview:** Multi-class classification model categorizing audio tracks into emotional states based on acoustic characteristics.
 
 ---
 
-## 🌐 Web System & Architecture
+## 🛠️ Core Skills & Expertise
 
-The portfolio application is built upon high-performance web standards to guarantee fast loading, accessibility, and smooth user interactions:
-
-- **Multilingual Support (EN/DE):** Real-time client-side language state management.
-- **Responsive Layout:** Engineered with HTML5, CSS3 (Tailwind Optimized), and ES6+ Vanilla JavaScript.
-- **Interactive Visuals:** Scroll animation triggers via AOS.js and dynamic testimonial modules.
+- **Data Analytics & BI:** Power BI, DAX, Power Query, Exploratory Data Analysis (EDA), Business Intelligence.
+- **Machine Learning:** Supervised Learning, Time-Series Analysis, Neural Networks, Predictive Modeling.
+- **Tools & Libraries:** Python (Pandas, NumPy, Scikit-Learn, PyTorch), SQL, Git.
 
 ---
 
 ## 👩‍💻 Credits & Engineering
 
-- **Data Science Content & Models:** [Sarah Sabouni](https://github.com/sarahsabouni96)
 - **System Architecture & Development:** Engineered and Developed by [Razan Azizieh](https://sy.linkedin.com/in/razan-azizieh)
